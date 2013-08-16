@@ -76,3 +76,6 @@
 
 [push]
 	default = matching
+[user]
+	email = daniel.klevebring@gmail.com
+	name = Daniel Klevebring
