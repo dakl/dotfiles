@@ -19,6 +19,9 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias hgr="histry|grep"
+alias fgr="find|grep"
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
