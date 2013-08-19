@@ -20,12 +20,9 @@ if [[ "$(type -P brew)" ]]; then
 
   # Install Homebrew recipes.
   recipes=(git tree sl lesspipe htop-osx man2html)
-
-  list="$(to_install "${recipes[*]}" "$(brew list)")"
-  if [[ "$list" ]]; then
-    echo "Installing Homebrew recipes: $list"
-    brew install $list
-  fi
+  for item in ${recipes[@]}; do
+      brew install $item
+  done
 
   if [[ ! "$(type -P gcc-4.2)" ]]; then
     echo "Installing Homebrew dupe recipe: apple-gcc42"
