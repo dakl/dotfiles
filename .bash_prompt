@@ -53,7 +53,7 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-function lastsuccess(){ [ $? = "0" ] &&  echo -e $YES || echo -e $NO; }
+function lastsuccess(){ [ $? = "0" ] &&  echo -e '\033[1;32m✔\033[0m' || echo -e '\033[1;31m✖\033[0m'; }
 
 export PS1="\$(lastsuccess) \[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 
