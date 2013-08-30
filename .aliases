@@ -19,6 +19,11 @@ alias oo="open ."
 alias hgr="history|grep"
 alias fgr="find|grep"
 
+# For SLURM-envs
+alias sq='squeue -o "%.7i %.16P %.30j %.8u %.8T %.10M %.9l %.6D %R"|grep kleve|nl'
+alias squeue='squeue -o "%.7i %.15P %.20j %.8u %.8T %.10M %.9l %.6D %R"'
+alias prj='cd /bubo/proj/b2010040/private/GoldenPath/nobackup'
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
