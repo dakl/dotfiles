@@ -20,7 +20,7 @@ alias hgr="history|grep"
 alias fgr="find|grep"
 
 # For SLURM-envs
-alias sq='squeue -o "%.7i %.16P %.60j %.8u %.8T %.10M %.9l %.6D %R"|grep kleve|sort -k2|nl'
+alias sq='squeue -o "%.7i %.16P %.60j %.8u %.8T %.10M %.9l %.6D %R"|grep kleve|sort -k1'
 alias squeue='squeue -o "%.7i %.15P %.20j %.8u %.8T %.10M %.9l %.6D %R"'
 alias prj='cd /bubo/proj/b2010040/private/GoldenPath/nobackup'
 
