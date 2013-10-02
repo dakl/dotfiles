@@ -17,7 +17,7 @@ alias v="vim"
 alias o="open"
 alias oo="open ."
 alias hgr="history|grep"
-alias fgr="find|grep"
+alias fgr="find .|grep"
 
 # For SLURM-envs
 alias sq='squeue -o "%.7i %.16P %.30j %.8u %.8T %.10M %.9l %.6D %R"|grep kleve|nl'
