@@ -41,3 +41,6 @@ if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
 
+## DRMAA at uppmax, thanks @johandahlberg
+export LD_LIBRARY_PATH=/sw/apps/build/slurm-drmaa/1.0.6/lib/:$LD_LIBRARY_PATH
+
