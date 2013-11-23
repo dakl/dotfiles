@@ -23,8 +23,8 @@ alias fgr="find .|grep"
 alias sq='squeue|grep kleve|sort -k1'
 alias squeue='squeue -o "%.7i %.16P %.60j %.20u %.8T %.10M %.9l %.6D %R"'
 
-# shortcut to project dir at kalkyl
-alias prj='cd /bubo/proj/b2010040/private/GoldenPath/nobackup'
+# shortcut to project dir at kalkyl and milou
+alias prj='cd /proj/b2010040/private/GoldenPath/nobackup'
 
 
 # Detect which `ls` flavor is in use
