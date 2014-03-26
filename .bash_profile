@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:~/python:$PATH"
+export PATH="/usr/local/sbin:$HOME/bin:~/python:$PATH"
 export PYTHONPATH=$PYTHONPATH:~/python
 
 # Load the shell dotfiles, and then some:
@@ -16,9 +16,6 @@ shopt -s nocaseglob
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
-
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -41,4 +38,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
+
+## DRMAA at uppmax, thanks @johandahlberg
+export LD_LIBRARY_PATH=/sw/apps/build/slurm-drmaa/1.0.6/lib/:$LD_LIBRARY_PATH
 
