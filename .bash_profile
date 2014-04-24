@@ -1,6 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="/usr/local/sbin:$HOME/bin:~/python:$PATH"
-export PYTHONPATH=$PYTHONPATH:~/python
+export PYTHONPATH=$PYTHONPATH:~/python:~/python//lib/python2.6/site-packages
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
