@@ -18,5 +18,3 @@ then
     . /etc/bashrc
   fi
 fi
-[ -n "$PS1" ] && source ~/.bash_profile
-
