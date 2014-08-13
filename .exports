@@ -27,6 +27,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #Don't user gnome to ask for password
 unset SSH_ASKPASS
 
+#PyEnv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+#CPANminus
+eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
