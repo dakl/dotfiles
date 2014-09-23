@@ -29,3 +29,4 @@ make
 cd $HOME/bin
 ln -s $HOME/repos/verticalize/verticalize
 
+
