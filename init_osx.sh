@@ -19,7 +19,7 @@ if [[ "$(type -P brew)" ]]; then
   brew update
 
   # Install Homebrew recipes.
-  recipes=(git tree sl lesspipe htop-osx man2html)
+  recipes=(git tree sl lesspipe htop-osx caskroom/cask/brew-cask)
   for item in ${recipes[@]}; do
       brew install $item
   done
@@ -28,4 +28,12 @@ if [[ "$(type -P brew)" ]]; then
     echo "Installing Homebrew dupe recipe: apple-gcc42"
     brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb
   fi
+  
+  # Install homebrew casks
+  casks=(macdown github caskroom/versions/java7 intellij-idea-ce)
+  for item in ${casks[@]}; do
+      brew cask install $item
+  done
+
 fi
+
