@@ -81,4 +81,4 @@
 	email = daniel.klevebring@gmail.com
 	name = Daniel Klevebring
 [diff "docx"]
-	textconv = /Users/danielk/Dropbox/bin/d2t
+	textconv = /Users/dankle/Dropbox/bin/d2t
