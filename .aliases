@@ -57,3 +57,6 @@ alias pumpitup="osascript -e 'set volume 7'"
 
 # what's my public ip?
 alias myip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+
+# ssh shortcuts
+alias pyrus="ssh danielk@10.0.0.73"
