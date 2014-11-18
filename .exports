@@ -34,3 +34,8 @@ eval "$(pyenv init -)"
 
 #CPANminus
 eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+
+export BREWPATH=$HOME/glob/private/linuxbrew
+export PATH="$BREWPATH/bin:$PATH"
+export MANPATH="$BREWPATH/share/man:$MANPATH"
+export INFOPATH="$BREWPATH/share/info:$INFOPATH"
