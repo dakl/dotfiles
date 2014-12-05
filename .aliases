@@ -10,6 +10,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias hgr="history|grep"
 alias fgr="find .|grep"
+alias t="todo.sh -d $HOME/.todo.cfg"
 
 # For SLURM-envs
 alias sq='squeue -u $USER'
