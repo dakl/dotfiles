@@ -21,6 +21,7 @@ source bootstrap.sh --force
 
 # python 2.7.8
 pyenv install 2.7.8
+pyenv global 2.7.8
 
 ## verticalize
 git clone https://github.com/lindenb/verticalize.git $HOME/repos/verticalize
