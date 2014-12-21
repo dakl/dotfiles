@@ -11,7 +11,7 @@ fi
 # Install Homebrew.
 if [[ ! "$(type -P brew)" ]]; then
   echo "Installing Homebrew"
-  true | /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 if [[ "$(type -P brew)" ]]; then
@@ -30,7 +30,7 @@ if [[ "$(type -P brew)" ]]; then
   fi
   
   # Install homebrew casks
-  casks=(macdown github caskroom/versions/java7 intellij-idea-ce)
+  casks=(macdown github ) #caskroom/versions/java7 intellij-idea-ce)
   for item in ${casks[@]}; do
       brew cask install $item
   done
