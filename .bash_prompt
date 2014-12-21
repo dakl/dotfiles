@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## @dakl added green/red symbols to represent success/failure of last command
+## based on https://gist.github.com/tung/409780
 
 
         RED="\[\033[0;31m\]"
