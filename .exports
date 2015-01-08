@@ -37,7 +37,7 @@ eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 
 ## Don't set these on OS X
 if [[ ! "$OSTYPE" =~ ^darwin ]]; then 
-  export BREWPATH=$HOME/glob/private/linuxbrew
+  export BREWPATH=$HOME/biobin
   export PATH="$BREWPATH/bin:$PATH"
   export MANPATH="$BREWPATH/share/man:$MANPATH"
   export INFOPATH="$BREWPATH/share/info:$INFOPATH"
