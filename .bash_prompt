@@ -12,6 +12,8 @@ LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
  COLOR_NONE="\[\e[0m\]"
+
+function lastsuccess(){ [ $? = "0" ] &&  echo -e '\033[1;32m✔\033[0m' || echo -e '\033[1;31m✖\033[0m'; }
  
 function parse_git_branch {
  
@@ -42,13 +44,7 @@ function parse_git_branch {
 
 function prompt_func() {
     previous_return_value=$?;
-    if [ "$TERM" != "linux" -a -z "$EMACS" ]
-    then
-        TITLEBAR="\[\e]2;\u@\h:\w\a\]"
-    else
-        TITLEBAR=""
-    fi
-    prompt="${TITLEBAR}${BLUE}[${YELLOW}\u@\h${RED} \w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE}"
+    prompt="\$(lastsuccess)  ${YELLOW}\u@\h${RED} \w${GREEN}$(parse_git_branch)${COLOR_NONE}"
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}${GREEN}\n\\\$${COLOR_NONE} "
