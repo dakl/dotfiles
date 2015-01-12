@@ -20,10 +20,10 @@ alias squeue='squeue -o "%.7i %.4P %a %.60j %.20u %.8T %.10M %.9l %.6D %R"'
 alias prj='cd /proj/b2010040/private/GoldenPath/nobackup'
 
 # Detect which `ls` flavor is in use
-if /bin/ls --color > /dev/null 2>&1; then # GNU `ls`
-  colorflag="--color"
-else # OS X `ls`
+if [[ "$OSTYPE" == "darwin"* ]]; then
   colorflag="-G"
+else
+  colorflag="--color"
 fi
 
 # List all files colorized in long format
