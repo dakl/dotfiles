@@ -30,5 +30,9 @@ make
 cd $HOME/bin
 ln -s $HOME/repos/verticalize/verticalize
 
+# git-achievements
+git clone https://github.com/dakl/git-achievements.git $HOME/bin/gitachievements
+ln -s $HOME/bin/gitachievements/git-achievements $HOME/bin/git-achievements
+
 ## bumpversion
 pip install --upgrade bumpversion
