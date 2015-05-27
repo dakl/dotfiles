@@ -30,10 +30,17 @@ if [[ "$(type -P brew)" ]]; then
   fi
   
   # Install homebrew casks
-  casks=(macdown github ) #caskroom/versions/java7 intellij-idea-ce)
+  casks=( Caskroom/cask/macdown Caskroom/cask/github ) #caskroom/versions/java7 intellij-idea-ce)
   for item in ${casks[@]}; do
       brew cask install $item
   done
 
 fi
 
+#brew cask install caskroom/versions/java7
+#brew cask install Caskroom/cask/pycharm-ce
+#brew install github-release
+#brew cask install rstudio
+#brew install Caskroom/cask/r
+#brew install Caskroom/cask/virtualbox
+#brew install homebrew/versions/scala210
