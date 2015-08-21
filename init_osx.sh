@@ -19,7 +19,7 @@ if [[ "$(type -P brew)" ]]; then
   brew update
 
   # Install Homebrew recipes.
-  recipes=(git tree sl lesspipe htop-osx caskroom/cask/brew-cask)
+  recipes=(git tree sl lesspipe htop-osx stress maven graphviz Caskroom/cask/brew-cask)
   for item in ${recipes[@]}; do
       brew install $item
   done
@@ -29,18 +29,20 @@ if [[ "$(type -P brew)" ]]; then
     brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb
   fi
   
-  # Install homebrew casks
-  casks=( Caskroom/cask/macdown Caskroom/cask/github ) #caskroom/versions/java7 intellij-idea-ce)
-  for item in ${casks[@]}; do
-      brew cask install $item
-  done
+  #brew casks
+  brew cask install Caskroom/cask/macdown
+  brew cask install Caskroom/versions/java7
+  brew cask install Caskroom/cask/pycharm-ce
+  #brew install github-release
+  brew install Caskroom/cask/r
+  brew install Caskroom/cask/rstudio
+  #brew install Caskroom/cask/virtualbox
+  brew install homebrew/versions/scala210
+  #brew install Caskroom/cask/chefdk
+  #brew install Caskroom/cask/puppet
+  brew install Caskroom/cask/keepingyouawake
+  brew install Caskroom/cask/virtualbox
+  brew install Caskroom/cask/vagrant
+  brew install Caskroom/cask/sourcetree
 
 fi
-
-#brew cask install caskroom/versions/java7
-#brew cask install Caskroom/cask/pycharm-ce
-#brew install github-release
-#brew cask install rstudio
-#brew install Caskroom/cask/r
-#brew install Caskroom/cask/virtualbox
-#brew install homebrew/versions/scala210
