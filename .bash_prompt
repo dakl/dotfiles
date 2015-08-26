@@ -15,36 +15,9 @@ LIGHT_GREEN="\[\033[1;32m\]"
 
 function lastsuccess(){ [ $? = "0" ] &&  echo -e '\033[1;32m✔\033[0m' || echo -e '\033[1;31m✖\033[0m'; }
  
-function parse_git_branch {
- 
-  git rev-parse --git-dir &> /dev/null
-  git_status="$(git status 2> /dev/null)"
-  branch_pattern="^# On branch ([^${IFS}]*)"
-  remote_pattern="# Your branch is (.*) of"
-  diverge_pattern="# Your branch and (.*) have diverged"
-  if [[ ! ${git_status}} =~ "working directory clean" ]]; then
-    state="${LIGHT_RED}⚡ "
-  fi
-  # add an else if or two here if you want to get more specific
-  if [[ ${git_status} =~ ${remote_pattern} ]]; then
-    if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      remote="${YELLOW}↑"
-    else
-      remote="${YELLOW}↓"
-    fi
-  fi
-  if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-    remote="${YELLOW}↕"
-  fi
-  if [[ ${git_status} =~ ${branch_pattern} ]]; then
-    branch=${BASH_REMATCH[1]}
-    echo " (${branch})${remote}${state}"
-  fi
-}
-
 function prompt_func() {
     previous_return_value=$?;
-    prompt="\$(lastsuccess)  ${YELLOW}\u@\h${RED} \w${GREEN}$(parse_git_branch)${COLOR_NONE}"
+    prompt="\$(lastsuccess)  ${YELLOW}\u@\h${RED} \w"
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}${GREEN}\n\\\$${COLOR_NONE} "
