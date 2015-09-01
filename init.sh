@@ -14,10 +14,10 @@ curl https://raw.githubusercontent.com/miyagawa/cpanminus/master/cpanm | perl - 
 eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 
 # dotfiles
-cd $HOME
-git clone https://github.com/dakl/dotfiles.git
-cd dotfiles
-source bootstrap.sh --force
+#cd $HOME
+#git clone https://github.com/dakl/dotfiles.git
+#cd dotfiles
+#source bootstrap.sh --force
 
 # python 2.7.8
 pyenv install 2.7.8
