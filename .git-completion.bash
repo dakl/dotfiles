@@ -1097,15 +1097,6 @@ _git_clone ()
 		return
 		;;
 	esac
-	case "$cur" in 
-	    *)
-		__gitcomp "
-                          https://github.com/
-                          https://bitbucket.org/
-                          "
-		return
-		;;
-	esac
 }
 
 _git_commit ()
