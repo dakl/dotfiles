@@ -63,4 +63,5 @@ alias myip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's
 alias pyrus="ssh danielk@10.0.0.73"
 
 # git achievements
-alias git="git-achievements"
+hash git-achievements 2>/dev/null && { alias git="git-achievements"; }
+
