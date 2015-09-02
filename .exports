@@ -40,3 +40,5 @@ if [[ ! "$OSTYPE" =~ ^darwin ]]; then
   export MANPATH="$BREWPATH/share/man:$MANPATH"
   export INFOPATH="$BREWPATH/share/info:$INFOPATH"
 fi
+
+source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
