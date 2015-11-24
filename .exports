@@ -42,3 +42,10 @@ if [[ ! "$OSTYPE" =~ ^darwin ]]; then
 fi
 
 source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+
+## Don't set these on OS X
+if [[ ! "$OSTYPE" =~ ^darwin ]]; then
+  if [ -f $HOME/bin/autoseq/init-autoseq.sh ]; then
+     . $HOME/bin/autoseq/init-autoseq.sh 
+  fi
+fi
