@@ -65,3 +65,5 @@ alias pyrus="ssh danielk@10.0.0.73"
 # git achievements
 hash git-achievements 2>/dev/null && { alias git="git-achievements"; }
 
+# don't soft wrap lines in less
+alias less='less -S'
