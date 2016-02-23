@@ -26,12 +26,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 unset SSH_ASKPASS
 
 #PyEnv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#CPANminus
-eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 ## Don't set these on OS X
 if [[ ! "$OSTYPE" =~ ^darwin ]]; then 
@@ -45,7 +42,7 @@ source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
 ## Don't set these on OS X
 if [[ ! "$OSTYPE" =~ ^darwin ]]; then
-  if [ -f $HOME/bin/autoseq/init-autoseq.sh ]; then
-     . $HOME/bin/autoseq/init-autoseq.sh 
+  if [ -f $HOME/bin/pipeline-tools/init-paths.sh ]; then
+     . $HOME/bin/pipeline-tools/init-paths.sh 
   fi
 fi
