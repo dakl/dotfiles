@@ -13,6 +13,8 @@ cd $HOME
 # conda
 wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 bash Miniconda-latest-Linux-x86_64.sh -b
+conda config --add channels r
+conda config --add channels bioconda
 conda install -y  pip cython
 
 ## bumpversion
