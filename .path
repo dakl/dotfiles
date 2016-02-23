@@ -1,3 +1,23 @@
 export PATH=$PATH:~/bin:$HOME/Dropbox/bin
+
+## Don't set these on OS X
+if [[ ! "$OSTYPE" =~ ^darwin ]]; then
+  export BREWPATH=$HOME/.linuxbrew
+  export PATH="$BREWPATH/bin:$PATH"
+  export MANPATH="$BREWPATH/share/man:$MANPATH"
+  export INFOPATH="$BREWPATH/share/info:$INFOPATH"
+fi
+
+source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+
+## Don't set these on OS X
+if [[ ! "$OSTYPE" =~ ^darwin ]]; then
+  if [ -f $HOME/bin/pipeline-tools/init-paths.sh ]; then
+     . $HOME/bin/pipeline-tools/init-paths.sh
+  fi
+fi
+
+
+
 export PATH=$HOME/miniconda2/bin/:$PATH
 
