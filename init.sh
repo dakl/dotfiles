@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# set git user and email
+git config --global user.email "daniel.klevebring@gmail.com"
+git config --global user.name "Daniel Klevebring"
+
 # create dirs
 mkdir -p $HOME/repos
 mkdir -p $HOME/bin
