@@ -27,6 +27,10 @@ make
 cd $HOME/bin
 ln -s $HOME/repos/verticalize/verticalize
 
+## linuxbrew
+#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+
+
 # pyenv 
 #git clone git://github.com/yyuu/pyenv.git ~/.pyenv
 

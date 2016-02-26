@@ -8,7 +8,7 @@ if [[ ! "$OSTYPE" =~ ^darwin ]]; then
   export INFOPATH="$BREWPATH/share/info:$INFOPATH"
 fi
 
-source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+export PATH="/home/vagrant/.linuxbrew/bin:$PATH"
 
 ## Don't set these on OS X
 if [[ ! "$OSTYPE" =~ ^darwin ]]; then
@@ -16,8 +16,6 @@ if [[ ! "$OSTYPE" =~ ^darwin ]]; then
      . $HOME/bin/pipeline-tools/init-paths.sh
   fi
 fi
-
-
 
 export PATH=$HOME/miniconda2/bin/:$PATH
 
