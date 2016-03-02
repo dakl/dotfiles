@@ -49,3 +49,10 @@ if [[ ! "$OSTYPE" =~ ^darwin ]]; then
      . $HOME/bin/autoseq/init-autoseq.sh 
   fi
 fi
+
+# only set on os x
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  if [ -f /usr/local/bin/lesspipe.sh ]; then
+    export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+  fi
+fi
