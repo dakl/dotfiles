@@ -19,7 +19,7 @@ bg_cyan = '46m'
 bg_gray = '47m'
 
 hosts = {'LM0276MEB':('m', bg_gray),
-	 'grond':(red, bg_gray),
+	 'grond':(gray, bg_red),
 	 'milou':(yellow, bg_blue),
 	 'anchorage':(black, bg_green),
 	 'fairbanks':(black, bg_yellow)

@@ -17,7 +17,7 @@ function lastsuccess(){ [ $? = "0" ] &&  echo -e '\033[1;32m✔\033[0m' || echo 
  
 function prompt_func() {
     previous_return_value=$?;
-    prompt="\$(lastsuccess)  `python .color.py`${RED} \w"
+    prompt="\$(lastsuccess)  `python $HOME/.color.py`${RED} \w"
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}${GREEN}\n\\\$${COLOR_NONE} "
