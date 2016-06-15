@@ -19,21 +19,23 @@ bg_cyan = '46m'
 bg_gray = '47m'
 
 hosts = {'LM0276MEB':('m', bg_gray),
-	 'grond':(gray, bg_red),
-	 'milou':(yellow, bg_blue),
-	 'anchorage':(black, bg_green),
-	 'fairbanks':(black, bg_yellow)
+	 'grond': (gray, bg_red),
+	 'milou': (yellow, bg_blue),
+	 'anchorage': (black, bg_green),
+	 'fairbanks': (black, bg_yellow),
+         'ribes': (black, bg_cyan),
+         'other': (red, bg_gray)
 }
 
 hostname = socket.gethostname()
 
 def get_colors():
+    fg = hosts['other'][0]
+    bg = hosts['other'][1]
     for hname in hosts:
 	if hostname in hname or hname in hostname:
 	    fg = hosts[hname][0]
 	    bg = hosts[hname][1]
-	    return "\033[{fg}\033[{bg} \u@\h \033[0m".format(fg=fg, bg=bg)
-
-    return "\033[{fg}\033[{bg}\u@\h\033[0m".format(fg='m', bg='')
+    return "\033[{fg}\033[{bg} \u@\h \033[0m".format(fg=fg, bg=bg)
 
 print get_colors()
