@@ -33,9 +33,9 @@ def get_colors():
     fg = hosts['other'][0]
     bg = hosts['other'][1]
     for hname in hosts:
-	if hostname in hname or hname in hostname:
-	    fg = hosts[hname][0]
-	    bg = hosts[hname][1]
-    return "\033[{fg}\033[{bg} \u@\h \033[0m".format(fg=fg, bg=bg)
+        if hostname in hname or hname in hostname:
+            fg = hosts[hname][0]
+            bg = hosts[hname][1]
+    return r"\033[{fg}\033[{bg} \u@\h \033[0m".format(fg=fg, bg=bg)
 
-print get_colors()
+print(get_colors())
