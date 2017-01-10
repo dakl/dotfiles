@@ -64,3 +64,6 @@ alias myip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's
 
 # don't soft wrap lines in less
 alias less='less -S'
+
+#virtualenv activate
+alias venv='source venv/bin/activate'
