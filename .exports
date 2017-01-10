@@ -32,13 +32,3 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #Don't user gnome to ask for password
 unset SSH_ASKPASS
 
-if hash brew 2> /dev/null; then
-  source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
-fi
-
-# only set on os x
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-  if [ -f /usr/local/bin/lesspipe.sh ]; then
-    export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
-  fi
-fi
