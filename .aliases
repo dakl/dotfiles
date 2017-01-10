@@ -67,3 +67,8 @@ alias less='less -S'
 
 #virtualenv activate
 alias venv='source venv/bin/activate'
+
+#or I'll never learn
+alias emacs=nvim
+alias vim=nvim
+
