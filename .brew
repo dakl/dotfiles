@@ -29,8 +29,6 @@ function installcask() {
 }
 
 installcask dropbox
-installcask google-chrome
-installcask the-unarchiver
 
 # Remove outdated versions from the cellar
 brew cleanup
