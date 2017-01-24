@@ -11,14 +11,7 @@ alias dt="cd ~/Desktop"
 alias hgr="history|grep"
 alias fgr="find .|grep"
 alias pgr="ps aux|grep"
-alias t="todo.sh -d $HOME/.todo.cfg"
-
-# For SLURM-envs
-alias sq='squeue -u $USER'
-alias squeue='squeue -o "%.7i %.4P %a %.60j %.20u %.8T %.10M %.9l %.6D %.6C %R"'
-
-# shortcut to project dir at kalkyl and milou
-alias prj='cd /proj/b2010040/private/GoldenPath/nobackup'
+alias dc="docker-compose"
 
 # Detect which `ls` flavor is in use
 if [[ "$OSTYPE" == "darwin"* ]]; then
