@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'junegunn/fzf'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 noremap <C-p> :Files<CR>
 
@@ -19,7 +20,24 @@ let g:jedi#popup_on_dot = 1
 let g:jedi#popup_select_first = 1
 let g:jedi#show_call_signatures = "1"
 
-call plug#end()
+Plug 'mgedmin/pythonhelper'
+
+" Async linting engine
+Plug 'w0rp/ale'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_linters = {
+  \   'python': ['flake8'],
+  \}
+  let g:ale_sign_column_always = 1
+  let g:ale_sign_error = '⨉'
+  let g:ale_sign_warning = '⚠'
+
+Plug 'alfredodeza/pytest.vim'
+nmap <silent><Leader>pf <Esc>:Pytest file -s<CR>
+nmap <silent><Leader>pc <Esc>:Pytest class -s<CR>
+nmap <silent><Leader>pm <Esc>:Pytest method -s<CR>
+
+  call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -99,4 +117,52 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 map <D-Z> u 
 map! <D-Z> <C-O>u 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Python related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" If you are using virtualenv, it is recommended that you create environments specifically for Neovim.
+" This way, you will not need to install the neovim package in each virtualenv.
+
+let g:python_host_prog = '/Users/daniel.klevebring/miniconda2/bin/python'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Status line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! UpdateMode(mode)
+  if a:mode == 'i'
+    hi User1 ctermbg=234 ctermfg=2
+  else
+    hi User1 ctermbg=0 ctermfg=12
+  endif
+endfunction
+
+function! LintStatus()
+  let status = ALEGetStatusLine()
+  if status != ''
+    return '['.status.']'
+  else
+    return ''
+endfunction
+
+set statusline=
+set statusline +=%1*\ \%{toupper(mode())}\ \%*
+set statusline +=%2*%f
+
+" right aligned
+set statusline +=%=
+" set statusline +=%2*%=\ \[%{fugitive#head()}]\ \%*
+
+"display a warning if fileformat isnt unix
+set statusline +=%#warningmsg#
+set statusline +=%{&ff!='unix'?'['.&ff.']':''}
+set statusline+=%*
+
+"display a warning if file encoding isnt utf-8
+set statusline +=%#warningmsg#
+set statusline +=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
+set statusline+=%*
+
+set statusline +=%{TagInStatusLine()}
+set statusline +=%{LintStatus()}
+set statusline +=%*
 
