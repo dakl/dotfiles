@@ -37,7 +37,9 @@ nmap <silent><Leader>pf <Esc>:Pytest file -s<CR>
 nmap <silent><Leader>pc <Esc>:Pytest class -s<CR>
 nmap <silent><Leader>pm <Esc>:Pytest method -s<CR>
 
-  call plug#end()
+Plug 'Vimjas/vim-python-pep8-indent'
+
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -97,6 +99,10 @@ set autoindent
 
 " Preview substitutions as you type
 set inccommand=nosplit
+
+" Preserve selection when indenting selected blocks
+vnoremap > >gv
+vnoremap < <gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Netrw, borrowed from mcantor
