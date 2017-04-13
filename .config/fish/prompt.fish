@@ -128,5 +128,13 @@ function fish_right_prompt
         end
     end
 
+    # set pushover_notification_duration 1000
+    # if test $pushover_user; and test $pushover_key; and test $CMD_DURATION -gt $pushover_notification_duration
+    #     curl -s \
+    #         --form-string "token=$pushover_key" \
+    #         --form-string "user=$pushover_user" \
+    #         --form-string "message=$history[1] finished in $duration" \
+    #         https://api.pushover.net/1/messages.json > /dev/null
+    # end
 
 end
