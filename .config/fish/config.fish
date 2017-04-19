@@ -11,8 +11,11 @@ source ~/.config/fish/abbr.fish
 set PATH /Users/daniel.klevebring/miniconda2/bin/ $PATH
 
 # conda fish helper
-source (conda info --root)/etc/fish/conf.d/conda.fish
+if command --search conda
+  source (conda info --root)/etc/fish/conf.d/conda.fish
+end
 
+# add local extras, if they exist
 if test -f ~/.extra.fish
   source ~/.extra.fish
 end
