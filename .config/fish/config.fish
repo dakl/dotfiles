@@ -8,7 +8,7 @@ source ~/.config/fish/functions.fish
 source ~/.config/fish/abbr.fish
 
 #path
-set PATH $HOME/miniconda2/bin/ $PATH
+set PATH $HOME/miniconda2/bin $PATH
 
 # conda fish helper
 if command --search conda
