@@ -129,7 +129,7 @@ map! <D-Z> <C-O>u
 " If you are using virtualenv, it is recommended that you create environments specifically for Neovim.
 " This way, you will not need to install the neovim package in each virtualenv.
 
-let g:python_host_prog = '/Users/daniel.klevebring/miniconda2/bin/python'
+let g:python_host_prog = $HOME . '/miniconda2/bin/python'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
