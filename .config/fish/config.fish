@@ -5,7 +5,7 @@ source ~/.config/fish/abbr.fish
 set PATH $HOME/miniconda2/bin $PATH
 
 # conda fish helper
-if command --search conda
+if command --search conda > /dev/null
   source (conda info --root)/etc/fish/conf.d/conda.fish
 end
 
