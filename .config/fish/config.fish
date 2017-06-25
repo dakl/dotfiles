@@ -15,7 +15,7 @@ if test -f ~/.extra.fish
 end
 
 # check if ssh key is added, if not; add it.
-if not ssh-add -l
+if not ssh-add -l > /dev/null
   ssh-add ~/.ssh/id_rsa
 end
 
