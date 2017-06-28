@@ -13,3 +13,7 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 .dropbox
+
+# vscode settings
+.vscode
+
