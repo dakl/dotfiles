@@ -1,0 +1,56 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "cmd+t cmd+right",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "cmd+t cmd+left",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "cmd+t cmd+a",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+t cmd+n",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "cmd+t cmd+t",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+t cmd+1",
+        "command": "workbench.action.terminal.focusAtIndex1"
+    },
+    {
+        "key": "cmd+t cmd+2",
+        "command": "workbench.action.terminal.focusAtIndex2"
+    },
+    {
+        "key": "cmd+t cmd+3",
+        "command": "workbench.action.terminal.focusAtIndex3"
+    },
+    {
+        "key": "cmd+t cmd+4",
+        "command": "workbench.action.terminal.focusAtIndex4"
+    },
+    {
+        "key": "cmd+t cmd+v",
+        "command": "workbench.action.terminal.paste"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "cmd+t cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    }
+]
