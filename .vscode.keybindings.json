@@ -52,5 +52,21 @@
         "key": "cmd+t cmd+w",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+s",
+        "command": "python.sortImports"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
+
+
 ]
