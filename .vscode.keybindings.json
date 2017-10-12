@@ -66,7 +66,15 @@
         "key": "cmd+k cmd+c",
         "command": "-editor.action.addCommentLine",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+s",
+        "command": "gitlens.showCommitSearch",
+        "when": "gitlens:enabled"
+    },
+    {
+        "key": "shift+alt+7",
+        "command": "-gitlens.showCommitSearch",
+        "when": "gitlens:enabled"
     }
-
-
 ]
