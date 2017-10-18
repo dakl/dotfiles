@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 1,
+    "editor.rulers": [
+        80, 120
+    ],
+    "workbench.editor.showIcons": true,
+    "workbench.iconTheme": "vs-seti",
+    "editor.minimap.showSlider": "always"
+
+}
