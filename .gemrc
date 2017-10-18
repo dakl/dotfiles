@@ -1,3 +1,0 @@
-:gemdir:
-    - ~/.gem/ruby
-install: --user-install
