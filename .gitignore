@@ -19,3 +19,6 @@ Thumbs.db
 
 # virtualenvs
 .venv
+
+# bigquery_credentials
+bigquery_credentials.dat
