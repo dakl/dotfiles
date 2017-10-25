@@ -1,8 +1,11 @@
 function venv --description 'create or activate a virtualenv'
-    if not test -z "$argv"
-        virtualenv --prompt "($argv) " .venv
-        source .venv/bin/activate.fish
+    set VENV_BASE $HOME/.virtualenvs
+    if [ $argv = "ls" ]
+        ls $VENV_BASE
+    else if test -e $VENV_BASE/$argv
+        source $VENV_BASE/$argv/bin/activate.fish
     else
-        source .venv/bin/activate.fish
+        virtualenv --prompt "($argv) " $VENV_BASE/$argv
+        source $VENV_BASE/$argv/bin/activate.fish
     end
 end

@@ -33,6 +33,8 @@ function doIt() {
 		ln -s "$HOME/.vscode.settings.json" "$VSCODE_SETTINGS_FILE"
 	fi	
 
+	mkdir -p ${HOME}/.virtualenvs
+
 	echo "Done"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
