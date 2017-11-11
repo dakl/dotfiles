@@ -1,10 +1,25 @@
 {
-    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": true,
     "editor.rulers": [
-        80, 120
+        80,
+        120
     ],
+    "editor.minimap.showSlider": "always",
+    "editor.fontSize": 16,
+    "files.exclude": {
+        "**/*.pyc": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=119"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.unitTest.pyTestEnabled": false,
+    "python.venvPath": "~/.virtualenvs",
+    "python.formatting.provider": "yapf",
+    "window.zoomLevel": 1,
     "workbench.editor.showIcons": true,
-    "workbench.iconTheme": "vs-seti",
-    "editor.minimap.showSlider": "always"
-
+    "workbench.iconTheme": "vscode-icons"
 }
