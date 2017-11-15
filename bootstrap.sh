@@ -1,12 +1,16 @@
 #!/bin/bash
 
-cd "$(dirname "${BASH_SOURCE}")"
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DOTFILES_DIR
+
 #git pull origin master
 function doIt() {
 	echo "Copying dotfiles to $HOME/"
 	rsync --quiet \
 		--exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "init.sh" \
-		--exclude "init_osx.sh" --exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+		--exclude "init_osx.sh" --exclude "README.md" --exclude "LICENSE-MIT.txt" \
+		--exclude ".vscode.keybindings.json" --exclude ".vscode.settings.json" \
+		-av --no-perms . ~
 
 	mkdir -p "$HOME/Library/Application Support/Code/User/"
 	VSCODE_KEYBINDINGS_FILE="$HOME/Library/Application Support/Code/User/keybindings.json"
@@ -19,7 +23,7 @@ function doIt() {
 		fi
 	else
 	    echo "Symlinking vscode keybindings"
-		ln -s "$HOME/.vscode.keybindings.json" "$VSCODE_KEYBINDINGS_FILE"
+		ln -s "$DOTFILES_DIR/.vscode.keybindings.json" "$VSCODE_KEYBINDINGS_FILE"
 	fi	
 
 	if [[ -e "$VSCODE_SETTINGS_FILE" ]]; then
@@ -30,9 +34,10 @@ function doIt() {
 		fi
 	else
 	    echo "Symlinking vscode settings"
-		ln -s "$HOME/.vscode.settings.json" "$VSCODE_SETTINGS_FILE"
+		ln -s "$DOTFILES_DIR/.vscode.settings.json" "$VSCODE_SETTINGS_FILE"
 	fi	
 
+	# create virtualenvs dir if it doesn't exist
 	mkdir -p ${HOME}/.virtualenvs
 
 	echo "Done"
