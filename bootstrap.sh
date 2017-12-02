@@ -7,9 +7,17 @@ cd $DOTFILES_DIR
 function doIt() {
 	echo "Copying dotfiles to $HOME/"
 	rsync --quiet \
-		--exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "init.sh" \
-		--exclude "init_osx.sh" --exclude "README.md" --exclude "LICENSE-MIT.txt" \
-		--exclude ".vscode.keybindings.json" --exclude ".vscode.settings.json" \
+		--exclude ".git/" \
+		--exclude ".vscode/" \
+		--exclude ".DS_Store" \
+		--exclude "bootstrap.sh" \
+		--exclude "init.sh" \
+		--exclude "init_osx.sh" \
+		--exclude "README.md" \
+		--exclude "LICENSE-MIT.txt" \
+		--exclude ".vscode.keybindings.json" \
+		--exclude ".vscode.settings.json" \
+		--exclude "homebrew.sh" \
 		-av --no-perms . ~
 
 	mkdir -p "$HOME/Library/Application Support/Code/User/"
