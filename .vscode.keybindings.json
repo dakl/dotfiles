@@ -95,5 +95,10 @@
     {
         "key": "cmd+k cmd+s",
         "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "shift+alt+7",
+        "command": "-gitlens.showCommitSearch",
+        "when": "gitlens:enabled && gitlens:keymap == 'standard'"
     }
 ]
