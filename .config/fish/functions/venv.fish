@@ -31,6 +31,8 @@ function venv --argument-names cmd VENV_NAME --description 'list (ls), create (m
     else if [ $cmd = "a" ]
         if test -e $VENV_BASE/$VENV_NAME
             source $VENV_BASE/$VENV_NAME/bin/activate.fish
+        else if test -e .venv
+            source .venv/bin/activate.fish
         else
             echo "Virtualenv \"$VENV_NAME\" doesn't exists. Create it first by running \"venv mk $VENV_NAME\""
         end
