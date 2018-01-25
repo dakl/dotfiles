@@ -2,11 +2,11 @@
 source ~/.config/fish/abbr.fish
 
 #path, use miniconda3 if available
-if test -e $HOME/miniconda3
-  set PATH $HOME/miniconda3/bin $PATH
-else
-  set PATH $HOME/miniconda2/bin $PATH
-end
+# if test -e $HOME/miniconda3
+#   set PATH $HOME/miniconda3/bin $PATH
+# else
+#   set PATH $HOME/miniconda2/bin $PATH
+# end
 
 # conda fish helper
 if command --search conda > /dev/null
