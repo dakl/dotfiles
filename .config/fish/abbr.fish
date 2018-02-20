@@ -5,5 +5,6 @@ abbr hgr 'history|grep'
 abbr ga 'git add'
 abbr gc 'git commit -m '
 abbr gco 'git checkout'
+abbr gs 'git status'
 
 abbr kc 'kubectl'
