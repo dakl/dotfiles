@@ -100,5 +100,13 @@
         "key": "shift+alt+7",
         "command": "-gitlens.showCommitSearch",
         "when": "gitlens:enabled && gitlens:keymap == 'standard'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "jupyter.execCurrentCell"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "jupyter.execCurrentCellAndAdvance"
     }
 ]
