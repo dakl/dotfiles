@@ -25,3 +25,6 @@ bigquery_credentials.dat
 
 node_modules
 
+# notebook dirs
+.notebooks
+
