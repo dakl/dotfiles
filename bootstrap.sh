@@ -48,6 +48,11 @@ function doIt() {
 	# create virtualenvs dir if it doesn't exist
 	mkdir -p ${HOME}/.virtualenvs
 
+	#copy git hooks
+	echo "Copying git hooks"
+	mkdir -p ${HOME}/.git/hooks
+	cp git/hooks/* ${HOME}/.git/hooks/
+
 	echo "Done"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
