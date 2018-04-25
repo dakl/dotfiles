@@ -18,6 +18,10 @@ if test -f ~/.extra.fish
   source ~/.extra.fish
 end
 
+if test -f ~/.config/private/env.sh
+  source ~/.config/private/env.sh
+end
+
 # check if ssh key is added, if not; add it.
 if not ssh-add -l > /dev/null
   ssh-add ~/.ssh/id_rsa
