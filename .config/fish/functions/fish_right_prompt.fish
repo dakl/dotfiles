@@ -7,7 +7,8 @@ function fish_right_prompt
     else
         set items "😢 " "💥 " "👿 " "☠️ " "💩 " "🤢 "
     end
-    set __item_index (random 1 (count $items))
+
+    set __item_index (python -c "import random, sys; print(random.randint(1, int(sys.argv[1])))" (count $items))
     echo $items[$__item_index]
 
     if test $CMD_DURATION
