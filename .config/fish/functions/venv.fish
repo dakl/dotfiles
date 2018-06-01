@@ -1,5 +1,5 @@
 function venv --argument-names cmd VENV_NAME --description 'list (ls), create (mk) or activate (a) a virtualenv'
-    set VENV_BASE $HOME/.virtualenvs
+    set VENV_BASE .venv
 
     if [ -z $cmd ]
         set cmd 'unset'
@@ -9,38 +9,31 @@ function venv --argument-names cmd VENV_NAME --description 'list (ls), create (m
         set VENV_NAME (basename (pwd))
     end
     
-    ## List availavle virtualenvs
-    if [ $cmd = "ls" ]
-        # list available virtualenvs
-        ls $VENV_BASE
-
-    
     ## create a new virtualenv
-    else if [ $cmd = "mk" ]
-        if test -e $VENV_BASE/$VENV_NAME
-            echo "Virtualenv $VENV_NAME already exists. Can't create."
+    if [ $cmd = "mk" ]
+        if test -e $VENV_BASE
+            echo "Virtualenv already exists here. Can't create."
             exit 1
         else
             # ask for the name of the new virtualenv
             read -l VENV_NAME -c $VENV_NAME -p "set_color green; echo -n \"Create new virtualenv with name: \"; set_color normal; echo '> '"
-            virtualenv --prompt "($VENV_NAME) " $VENV_BASE/$VENV_NAME
-            source $VENV_BASE/$VENV_NAME/bin/activate.fish
+            virtualenv --prompt "($VENV_NAME) " $VENV_BASE
+            source $VENV_BASE/bin/activate.fish
         end
     
     ## Activate a virtualenv
     else if [ $cmd = "a" ]
-        if test -e $VENV_BASE/$VENV_NAME
-            source $VENV_BASE/$VENV_NAME/bin/activate.fish
+        if test -e $VENV_BASE
+            source $VENV_BASE/bin/activate.fish
         else if test -e .venv
             source .venv/bin/activate.fish
         else
-            echo "Virtualenv \"$VENV_NAME\" doesn't exists. Create it first by running \"venv mk $VENV_NAME\""
+            echo "Virtualenv doesn't exist here. Create it first by running \"venv mk\""
         end
 
     else
         echo "Usage:"
-        echo "List virtualenvs:      venv ls"
-        echo "Create new virtualenv: venv mk [virtualenv_name] (default name of current dir)"
-        echo "Activate virtualenv:   venv a [virtualenv_name] (default name of current dir)"        
+        echo "Create new virtualenv: venv mk"
+        echo "Activate virtualenv:   venv a"
     end
 end
