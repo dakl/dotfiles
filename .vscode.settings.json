@@ -15,12 +15,12 @@
     "python.linting.flake8Args": [
         "--max-line-length=119"
     ],
-    "python.linting.pylintEnabled": false,
-    "python.unitTest.pyTestEnabled": true,
     "python.unitTest.pyTestArgs": ["-vv"],
-    "python.venvPath": "~/.virtualenvs",
+    "python.venvPath": "${rootPath}",
     "python.formatting.provider": "yapf",
     "window.zoomLevel": 0,
     "workbench.editor.showIcons": true,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "git.enableSmartCommit": true,
+    "jupyter.appendResults": false
 }
