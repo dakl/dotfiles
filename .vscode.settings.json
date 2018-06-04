@@ -21,6 +21,5 @@
     "window.zoomLevel": 0,
     "workbench.editor.showIcons": true,
     "workbench.iconTheme": "vscode-icons",
-    "git.enableSmartCommit": true,
-    "jupyter.appendResults": false
+    "python.linting.mypyEnabled": true
 }
