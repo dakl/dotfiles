@@ -108,5 +108,17 @@
     {
         "key": "cmd+enter",
         "command": "jupyter.execCurrentCellAndAdvance"
+    },
+    {
+        "key": "cmd+t cmd+r",
+        "command": "python.runtests"
+    },
+    {
+        "key": "cmd+t cmd+o",
+        "command": "python.selectAndRunTestFile"
+    },
+    {
+        "key": "cmd+t cmd+f",
+        "command": "python.runCurrentTestFile"
     }
 ]
