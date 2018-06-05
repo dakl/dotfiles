@@ -10,10 +10,8 @@ You can clone the repository wherever you want. (I like to keep it in `~/Project
 git clone https://github.com/dakl/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
-### Using the init scripts
+# Install base packages with homebrew
 
-The scripts `init.sh` and `init-osx.sh` assumes that the dotfiles are already bootstrapped.
-
-* On linux: `./init.sh`
-* On OS X: `./init-osx.sh`
-
+```fish
+brew install (cat brew-packages.txt)
+```
