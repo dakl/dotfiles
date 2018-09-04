@@ -17,7 +17,7 @@ function venv --argument-names cmd VENV_NAME --description 'list (ls), create (m
         else
             # ask for the name of the new virtualenv
             read -l VENV_NAME -c $VENV_NAME -p "set_color green; echo -n \"Create new virtualenv with name: \"; set_color normal; echo '> '"
-            virtualenv --prompt "($VENV_NAME) " $VENV_BASE
+            python -m venv $VENV_BASE --prompt "($VENV_NAME) "
             source $VENV_BASE/bin/activate.fish
         end
     
