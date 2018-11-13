@@ -11,6 +11,7 @@
         "**/*.pyc": true
     },
     "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
         "--max-line-length=119"
@@ -21,5 +22,11 @@
     "window.zoomLevel": 0,
     "workbench.editor.showIcons": true,
     "workbench.iconTheme": "vscode-icons",
-    "python.linting.mypyEnabled": true
+    "workbench.statusBar.feedback.visible": false,
+    "terminal.integrated.rendererType": "dom",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.keymap": "chorded",
+    "vsicons.dontShowNewVersionMessage": true
 }
