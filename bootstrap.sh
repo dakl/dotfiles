@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VSCODE_KEYBINDINGS_FILE="$HOME/Library/Application Support/Code/User/keybindings.json"
+VSCODE_SETTINGS_FILE="$HOME/Library/Application Support/Code/User/settings.json"
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DOTFILES_DIR
 
@@ -12,17 +14,13 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "init.sh" \
-		--exclude "init_osx.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		--exclude ".vscode.keybindings.json" \
 		--exclude ".vscode.settings.json" \
-		--exclude "homebrew.sh" \
 		-av --no-perms . ~
 
 	mkdir -p "$HOME/Library/Application Support/Code/User/"
-	VSCODE_KEYBINDINGS_FILE="$HOME/Library/Application Support/Code/User/keybindings.json"
-	VSCODE_SETTINGS_FILE="$HOME/Library/Application Support/Code/User/settings.json"
 	if [[ -e "$VSCODE_KEYBINDINGS_FILE" ]]; then
 	    if [[ -L "$VSCODE_KEYBINDINGS_FILE" ]]; then # in bash, -L means "is a symbolic link".
 			echo "Symlink for vscode keybindings already in place, skipping symlinking"
@@ -44,9 +42,6 @@ function doIt() {
 	    echo "Symlinking vscode settings"
 		ln -s "$DOTFILES_DIR/.vscode.settings.json" "$VSCODE_SETTINGS_FILE"
 	fi	
-
-	# create virtualenvs dir if it doesn't exist
-	mkdir -p ${HOME}/.virtualenvs
 
 	#copy git hooks
 	echo "Copying git hooks"
