@@ -27,3 +27,7 @@ if not ssh-add -l > /dev/null
   ssh-add ~/.ssh/id_rsa
 end
 
+if command --search pyenv > /dev/null
+  status --is-interactive; and source (pyenv init -|psub)
+end
+

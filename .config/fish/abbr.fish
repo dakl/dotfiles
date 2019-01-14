@@ -8,3 +8,4 @@ abbr gco 'git checkout'
 abbr gs 'git status'
 
 abbr kc 'kubectl'
+abbr resetdns 'sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
