@@ -1,57 +1,43 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install other useful binaries
+brew install git
 
 # set git user and email
 git config --global user.email "daniel.klevebring@gmail.com"
 git config --global user.name "Daniel Klevebring"
 
-# create dirs
-mkdir -p $HOME/repos
-mkdir -p $HOME/bin
+# Install Bash 4 and fish-shell
+brew install bash fish
 
-cd $HOME
+# Install wget with IRI support
+brew install wget --enable-iri
 
-# conda
-wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
-bash Miniconda-latest-Linux-x86_64.sh -b
-conda config --add channels r
-conda config --add channels bioconda
-conda install -y  pip cython
-
-## bumpversion
-pip install --upgrade bumpversion
-
-## verticalize
-git clone https://github.com/lindenb/verticalize.git $HOME/repos/verticalize
-cd $HOME/repos/verticalize
-make
-cd $HOME/bin
-ln -s $HOME/repos/verticalize/verticalize
-
-## linuxbrew
-#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
 
 
-# pyenv 
-#git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+# Install ag, http and jq
+brew install the_silver_searcher httpie jq
 
-## cpanminus
-#curl https://raw.githubusercontent.com/miyagawa/cpanminus/master/cpanm | perl - -l ~/perl5 App::cpanminus local::lib
-#eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
 
-# dotfiles
-#cd $HOME
-#git clone https://github.com/dakl/dotfiles.git
-#cd dotfiles
-#source bootstrap.sh --force
+installcask dropbox vscode
 
-# python 2.7.8
-#pyenv install 2.7.8
-#pyenv global 2.7.8
-
-# git-achievements
-#git clone https://github.com/dakl/git-achievements.git $HOME/bin/gitachievements
-#ln -s $HOME/bin/gitachievements/git-achievements $HOME/bin/git-achievements
-
-
-
-
+# Remove outdated versions from the cellar
+brew cleanup
