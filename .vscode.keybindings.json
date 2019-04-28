@@ -55,7 +55,8 @@
     },
     {
         "key": "cmd+k cmd+s",
-        "command": "python.sortImports"
+        "command": "python.sortImports",
+        "when": "editorTextFocus && editorLangId == 'python'"
     },
     {
         "key": "cmd+k cmd+c",
@@ -107,5 +108,15 @@
     {
         "key": "cmd+t cmd+f",
         "command": "python.runCurrentTestFile"
+    },
+    {
+        "key": "cmd+k cmd+s",
+        "command": "sort-imports.sort",
+        "when": "editorTextFocus && editorLangId == 'javascript'"
+    },
+    {
+        "key": "cmd+s cmd+s",
+        "command": "editor.action.sortLinesAscending",
+        "when": "editorTextFocus"
     }
 ]
