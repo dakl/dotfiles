@@ -118,5 +118,9 @@
         "key": "cmd+l cmd+s",
         "command": "editor.action.sortLinesAscending",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+[IntlBackslash]",
+        "command": "editor.action.transformToUppercase"
     }
 ]
