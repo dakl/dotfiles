@@ -115,7 +115,7 @@
         "when": "editorTextFocus && editorLangId == 'javascript'"
     },
     {
-        "key": "cmd+s cmd+s",
+        "key": "cmd+l cmd+s",
         "command": "editor.action.sortLinesAscending",
         "when": "editorTextFocus"
     }
