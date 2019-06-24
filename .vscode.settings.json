@@ -3,6 +3,7 @@
     "editor.renderControlCharacters": true,
     "editor.rulers": [
         80,
+        100,
         120
     ],
     "editor.minimap.showSlider": "always",
@@ -13,13 +14,10 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=119"
-    ],
     "python.testing.pyTestArgs": ["-vv"],
     "python.venvPath": "${rootPath},~/.local/share/virtualenvs/",
-    "python.formatting.provider": "yapf",
-    "window.zoomLevel": 1,
+    "python.formatting.provider": "black",
+    "window.zoomLevel": 0,
     "workbench.editor.showIcons": true,
     "workbench.statusBar.feedback.visible": false,
     "terminal.integrated.rendererType": "dom",
@@ -27,9 +25,12 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.keymap": "chorded",
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.iconTheme": "vscode-icons",
     "eslint.provideLintTask": true,
     "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "editor.minimap.maxColumn": 80,
+    "sort-imports.on-save": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Visual Studio Light",
+    "python.formatting.blackPath": "black"
 }
