@@ -31,3 +31,9 @@ if command --search pyenv > /dev/null
   status --is-interactive; and source (pyenv init -|psub)
 end
 
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
