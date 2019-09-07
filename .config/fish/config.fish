@@ -22,6 +22,8 @@ if test -f ~/.config/private/env.sh
   source ~/.config/private/env.sh
 end
 
+fish_ssh_agent
+
 # check if ssh key is added, if not; add it.
 if not ssh-add -l > /dev/null
   ssh-add ~/.ssh/id_rsa
