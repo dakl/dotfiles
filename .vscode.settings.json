@@ -14,7 +14,7 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.testing.pyTestArgs": ["-vv"],
+    "python.testing.pytestArgs": ["-vv"],
     "python.venvPath": "${rootPath},~/.local/share/virtualenvs/",
     "python.formatting.provider": "black",
     "window.zoomLevel": 0,
@@ -32,5 +32,6 @@
     "sort-imports.on-save": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Visual Studio Light",
-    "python.formatting.blackPath": "black"
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "editor.minimap.enabled": false
 }
