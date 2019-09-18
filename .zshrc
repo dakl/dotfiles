@@ -139,6 +139,7 @@ SPACESHIP_GIT_BRANCH_PREFIX=""
 SPACESHIP_GIT_STATUS_STASHED=""
 
 SPACESHIP_PROMPT_ORDER=(
+  venv          # Virtualenv section
   time          # Time stamps section
   user          # Username section
   dir           # Current directory section
