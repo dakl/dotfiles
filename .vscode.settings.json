@@ -33,5 +33,8 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Visual Studio Light",
     "python.formatting.blackPath": "/usr/local/bin/black",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "python.linting.flake8Args": [
+        "--max-line-length=100"
+    ]
 }
