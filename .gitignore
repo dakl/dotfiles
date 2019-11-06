@@ -30,3 +30,6 @@ node_modules
 
 # tox
 .tox
+
+#pyenv version spec file
+.python-version
