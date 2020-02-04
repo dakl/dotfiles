@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.pyenv/bin:/usr/local/bin:$PATH
+export CLOUDSDK_PYTHON=/usr/bin/python
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -121,16 +122,23 @@ fi
 autoload -U promptinit; promptinit
 prompt spaceship
 
-spaceship_statusemoji() {
-	if [ $? -eq 0 ]; then
-		ITEMS=("😄 " "👍 " "😍 " "🖖 " "👊 " "👌 " "🙌 " "😎 ")
+function get_emoji() {
+  return "hej"
+  local LAST_EXIT_CODE=$?
+  if [ $LAST_EXIT_CODE -eq 0 ]; then
+		local ITEMS=("😄 " "👍 " "😍 " "🖖 " "👊 " "👌 " "🙌 " "😎 ")
 	else
-		ITEMS=("😢 " "💥 " "👿 " "☠️ " "💩 " "🤢 ")
+		local ITEMS=("😢 " "💥 " "👿 " "☠️ " "💩 " "🤢 ")
 	fi
 	RND=$(python -c "import random, sys; print(random.randint(1, int(sys.argv[1])))" $(echo $#ITEMS))
-  spaceship::section \
+  return "abc"
+}
+
+spaceship_statusemoji() {
+  EMOJI="$(get_emoji)"
+	spaceship::section \
     "cyan" \
-    "$ITEMS[$RND]"
+    "--${EMOJI}--" 
 }
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
