@@ -122,23 +122,16 @@ fi
 autoload -U promptinit; promptinit
 prompt spaceship
 
-function get_emoji() {
-  return "hej"
-  local LAST_EXIT_CODE=$?
-  if [ $LAST_EXIT_CODE -eq 0 ]; then
-		local ITEMS=("😄 " "👍 " "😍 " "🖖 " "👊 " "👌 " "🙌 " "😎 ")
+spaceship_statusemoji() {
+	if [ $? -eq 0 ]; then
+		ITEMS=("😄 " "👍 " "😍 " "🖖 " "👊 " "👌 " "🙌 " "😎 ")
 	else
-		local ITEMS=("😢 " "💥 " "👿 " "☠️ " "💩 " "🤢 ")
+		ITEMS=("😢 " "💥 " "👿 " "☠️ " "💩 " "🤢 ")
 	fi
 	RND=$(python -c "import random, sys; print(random.randint(1, int(sys.argv[1])))" $(echo $#ITEMS))
-  return "abc"
-}
-
-spaceship_statusemoji() {
-  EMOJI="$(get_emoji)"
-	spaceship::section \
+  spaceship::section \
     "cyan" \
-    "--${EMOJI}--" 
+    "$ITEMS[$RND]"
 }
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
