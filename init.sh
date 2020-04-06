@@ -19,8 +19,8 @@ brew install git
 git config --global user.email "daniel.klevebring@gmail.com"
 git config --global user.name "Daniel Klevebring"
 
-# Install Bash 4 and fish-shell
-brew install bash fish
+# Install Bash
+brew install bash
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -29,15 +29,11 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-
 # Install ag, http and jq
 brew install the_silver_searcher httpie jq
 
-function installcask() {
-	brew cask install "${@}" 2> /dev/null
-}
-
-installcask dropbox vscode
+# vscode
+brew cask install vscode
 
 # Remove outdated versions from the cellar
 brew cleanup
