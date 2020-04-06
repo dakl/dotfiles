@@ -17,7 +17,7 @@
     "python.testing.pytestArgs": ["-vv"],
     "python.venvPath": "${rootPath},~/.local/share/virtualenvs/",
     "python.formatting.provider": "black",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "workbench.editor.showIcons": true,
     "workbench.statusBar.feedback.visible": false,
     "terminal.integrated.rendererType": "dom",
@@ -31,10 +31,17 @@
     "editor.minimap.maxColumn": 80,
     "sort-imports.on-save": false,
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Visual Studio Light",
     "python.formatting.blackPath": "/usr/local/bin/black",
     "editor.minimap.enabled": false,
     "python.linting.flake8Args": [
         "--max-line-length=100"
-    ]
+    ],
+    "python.dataScience.runStartupCommands": "'%load_ext autoreload\\n%autoreload 2'",
+    "python.dataScience.notebookFileRoot": "",
+    "importMagic.indentWithTabs": false,
+    "importMagic.maxColumns": 100,
+    "git.confirmSync": false,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "workbench.preferredLightColorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Monokai Dimmed"
 }
