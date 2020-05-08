@@ -42,7 +42,7 @@ source $HOME/.config/zsh/venv.zsh
 source $HOME/.config/zsh/statusemoji.zsh
 source $HOME/.config/zsh/prompt.zsh
 
-if [ ! -f $HOME/.extra.sh ]; then
+if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
 
