@@ -1,4 +1,6 @@
-export PATH=$HOME/.pyenv/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.pyenv/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
 export CLOUDSDK_PYTHON=/usr/bin/python
 
 # Path to your oh-my-zsh installation.
