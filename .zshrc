@@ -52,4 +52,3 @@ if type "pyenv" 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
