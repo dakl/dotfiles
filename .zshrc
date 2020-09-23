@@ -38,6 +38,10 @@ plugins=(
   globalias
 )
 
+if type "pyenv" 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/alias.zsh
 source $HOME/.config/zsh/venv.zsh
@@ -46,10 +50,6 @@ source $HOME/.config/zsh/prompt.zsh
 
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
-fi
-
-if type "pyenv" 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
 fi
 
 ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
