@@ -42,6 +42,12 @@ if type "pyenv" 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# kubectl zsh autocomplete
+# https://kubernetes.io/docs/reference/kubectl/cheatsheet/#zsh
+if type "kubectl" 1>/dev/null 2>&1; then
+  echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
+fi
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/zsh/alias.zsh
 source $HOME/.config/zsh/venv.zsh
