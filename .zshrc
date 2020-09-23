@@ -7,7 +7,13 @@ export CLOUDSDK_PYTHON=/usr/bin/python
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="jreese"
+ZSH_THEME="spaceship"
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/.config/zsh/alias.zsh
+source $HOME/.config/zsh/venv.zsh
+source $HOME/.config/zsh/statusemoji.zsh
+source $HOME/.config/zsh/prompt.zsh
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -38,24 +44,6 @@ plugins=(
   globalias
 )
 
-if type "pyenv" 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-# kubectl zsh autocomplete
-# https://kubernetes.io/docs/reference/kubectl/cheatsheet/#zsh
-if type "kubectl" 1>/dev/null 2>&1; then
-  echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
-fi
-
-source $ZSH/oh-my-zsh.sh
-source $HOME/.config/zsh/alias.zsh
-source $HOME/.config/zsh/venv.zsh
-source $HOME/.config/zsh/statusemoji.zsh
-source $HOME/.config/zsh/prompt.zsh
-
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
-
-ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
