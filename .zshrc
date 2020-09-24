@@ -3,6 +3,14 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
 export CLOUDSDK_PYTHON=/usr/bin/python
 
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  	globalias
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+)
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -36,13 +44,6 @@ COMPLETION_WAITING_DOTS="true"
 # date format, see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-  globalias
-)
 
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
