@@ -19,3 +19,9 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_RPROMPT_ORDER=(
   statusemoji
 )
+
+if type pyenv > /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
