@@ -43,6 +43,6 @@
     "git.confirmSync": false,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "workbench.preferredLightColorTheme": "Solarized Dark",
-    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.colorTheme": "Default Dark+",
     "liveshare.featureSet": "stable"
 }
