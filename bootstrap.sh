@@ -2,6 +2,8 @@
 
 VSCODE_KEYBINDINGS_FILE="$HOME/Library/Application Support/Code/User/keybindings.json"
 VSCODE_SETTINGS_FILE="$HOME/Library/Application Support/Code/User/settings.json"
+VSCODE_PYTHON_SNIPPETS_FILE="$HOME/Library/Application Support/Code/User/snippets/python.json"
+
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DOTFILES_DIR
 
@@ -43,6 +45,16 @@ function doIt() {
 		ln -s "$DOTFILES_DIR/.vscode.settings.json" "$VSCODE_SETTINGS_FILE"
 	fi	
 
+	if [[ -e "$VSCODE_PYTHON_SNIPPETS_FILE" ]]; then
+	    if [[ -L "$VSCODE_PYTHON_SNIPPETS_FILE" ]]; then # in bash, -L means "is a symbolic link".
+			echo "Symlink for vscode settings already in place, skipping symlinking"
+		else
+		    echo "WARNING: vscode settings already exist, can't symlink."
+		fi
+	else
+	    echo "Symlinking vscode settings"
+		ln -s "$DOTFILES_DIR/.vscode.snippets.python.json" "$VSCODE_PYTHON_SNIPPETS_FILE"
+	fi	
 	#copy git hooks
 	echo "Copying git hooks"
 	mkdir -p ${HOME}/.git/hooks

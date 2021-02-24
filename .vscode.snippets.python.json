@@ -1,0 +1,6 @@
+{
+	"iPDB set trace": {
+        "prefix": "ipdb",
+        "body": "import ipdb; ipdb.set_trace()$0"
+    }
+}
