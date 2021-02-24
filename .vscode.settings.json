@@ -15,9 +15,8 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.testing.pytestArgs": ["-vv"],
-    "python.venvPath": "${rootPath},~/.local/share/virtualenvs/",
+    "python.venvPath": "~/.local/share/virtualenvs/",
     "python.formatting.provider": "black",
-    "window.zoomLevel": 1,
     "workbench.editor.showIcons": true,
     "workbench.statusBar.feedback.visible": false,
     "terminal.integrated.rendererType": "dom",
@@ -31,18 +30,25 @@
     "editor.minimap.maxColumn": 80,
     "sort-imports.on-save": false,
     "workbench.iconTheme": "vscode-icons",
-    "python.formatting.blackPath": "/usr/local/bin/black",
     "editor.minimap.enabled": false,
-    "python.linting.flake8Args": [
-        "--max-line-length=100"
-    ],
-    "python.dataScience.runStartupCommands": "'%load_ext autoreload\\n%autoreload 2'",
-    "python.dataScience.notebookFileRoot": "",
     "importMagic.indentWithTabs": false,
     "importMagic.maxColumns": 100,
     "git.confirmSync": false,
-    "python.dataScience.sendSelectionToInteractiveWindow": true,
     "workbench.preferredLightColorTheme": "Solarized Dark",
-    "workbench.colorTheme": "Visual Studio Light",
-    "liveshare.featureSet": "stable"
+    "liveshare.featureSet": "stable",
+    "python.linting.mypyEnabled": true,
+    "importMagic.multiline": "parentheses",
+    "workbench.colorTheme": "Default Light+",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "jupyter.runStartupCommands": "'%load_ext autoreload\\n%autoreload 2'",
+    "jupyter.notebookFileRoot": "",
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "jupyter.askForKernelRestart": false,
+    "files.insertFinalNewline": true
 }
