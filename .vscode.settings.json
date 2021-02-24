@@ -34,7 +34,6 @@
     "importMagic.indentWithTabs": false,
     "importMagic.maxColumns": 100,
     "git.confirmSync": false,
-    "workbench.preferredLightColorTheme": "Solarized Dark",
     "liveshare.featureSet": "stable",
     "python.linting.mypyEnabled": true,
     "importMagic.multiline": "parentheses",
