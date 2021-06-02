@@ -1,10 +1,10 @@
 {
     "iPDB set trace": {
         "prefix": "ipdb",
-        "body": "import ipdb; ipdb.set_trace()$0"
+        "body": "import ipdb; ipdb.set_trace() # fmt: skip $0"
     },
     "set ipython trace": {
         "prefix": "ipy",
-        "body": "import IPython; IPython.embed()"
+        "body": "import IPython; IPython.embed() # fmt: skip"
     }
 }
