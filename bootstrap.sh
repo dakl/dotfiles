@@ -47,12 +47,12 @@ function doIt() {
 
 	if [[ -e "$VSCODE_PYTHON_SNIPPETS_FILE" ]]; then
 	    if [[ -L "$VSCODE_PYTHON_SNIPPETS_FILE" ]]; then # in bash, -L means "is a symbolic link".
-			echo "Symlink for vscode settings already in place, skipping symlinking"
+			echo "Symlink for vscode snippets already in place, skipping symlinking"
 		else
-		    echo "WARNING: vscode settings already exist, can't symlink."
+		    echo "WARNING: vscode snippets already exist, can't symlink."
 		fi
 	else
-	    echo "Symlinking vscode settings"
+	    echo "Symlinking vscode snippets"
 		ln -s "$DOTFILES_DIR/.vscode.snippets.python.json" "$VSCODE_PYTHON_SNIPPETS_FILE"
 	fi	
 	#copy git hooks
@@ -61,7 +61,6 @@ function doIt() {
 	cp git/hooks/* ${HOME}/.git/hooks/
 
 	echo "Done"
-}
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
