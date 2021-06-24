@@ -54,11 +54,7 @@ function doIt() {
 	else
 	    echo "Symlinking vscode snippets"
 		ln -s "$DOTFILES_DIR/.vscode.snippets.python.json" "$VSCODE_PYTHON_SNIPPETS_FILE"
-	fi	
-	#copy git hooks
-	echo "Copying git hooks"
-	mkdir -p ${HOME}/.git/hooks
-	cp git/hooks/* ${HOME}/.git/hooks/
+	fi
 
 	echo "Done"
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
