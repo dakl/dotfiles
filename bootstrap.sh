@@ -57,6 +57,9 @@ function doIt() {
 	fi
 
 	echo "Done"
+
+}
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
