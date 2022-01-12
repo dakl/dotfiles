@@ -32,8 +32,5 @@ brew install homebrew/dupes/grep
 # Install ag, http and jq
 brew install the_silver_searcher httpie jq
 
-# vscode
-brew cask install vscode
-
 # Remove outdated versions from the cellar
 brew cleanup

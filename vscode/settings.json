@@ -29,7 +29,6 @@
     "eslint.alwaysShowStatus": true,
     "editor.minimap.maxColumn": 80,
     "sort-imports.on-save": false,
-    "workbench.iconTheme": "vscode-icons",
     "editor.minimap.enabled": false,
     "importMagic.indentWithTabs": false,
     "importMagic.maxColumns": 100,
@@ -37,7 +36,7 @@
     "liveshare.featureSet": "stable",
     "python.linting.mypyEnabled": true,
     "importMagic.multiline": "parentheses",
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Monokai Dimmed",
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
@@ -49,5 +48,8 @@
     "jupyter.notebookFileRoot": "",
     "jupyter.sendSelectionToInteractiveWindow": true,
     "jupyter.askForKernelRestart": false,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "security.workspace.trust.untrustedFiles": "open"
 }

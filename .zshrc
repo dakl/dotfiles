@@ -51,7 +51,10 @@ COMPLETION_WAITING_DOTS="true"
 # date format, see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
+# run homebrew load script
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
+
