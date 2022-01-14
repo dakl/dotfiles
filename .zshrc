@@ -9,6 +9,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+export PATH=$(pyenv root)/shims:$PATH
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
@@ -57,4 +58,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
-
