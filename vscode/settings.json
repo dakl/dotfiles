@@ -14,7 +14,9 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.testing.pytestArgs": ["-vv"],
+    "python.testing.pytestArgs": [
+        "-vv"
+    ],
     "python.venvPath": "~/.local/share/virtualenvs/",
     "python.formatting.provider": "black",
     "workbench.editor.showIcons": true,
@@ -24,8 +26,7 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.keymap": "chorded",
-    "eslint.provideLintTask": true,
-    "eslint.autoFixOnSave": true,
+    "eslint.lintTask.enable": true,
     "eslint.alwaysShowStatus": true,
     "editor.minimap.maxColumn": 80,
     "sort-imports.on-save": false,
@@ -36,7 +37,7 @@
     "liveshare.featureSet": "stable",
     "python.linting.mypyEnabled": true,
     "importMagic.multiline": "parentheses",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Solarized Light",
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
@@ -44,12 +45,74 @@
         "source.fixAll.eslint": true
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "jupyter.runStartupCommands": "'%load_ext autoreload\\n%autoreload 2'",
+    "jupyter.runStartupCommands": [
+        "'%load_ext autoreload\\n%autoreload 2'"
+    ],
     "jupyter.notebookFileRoot": "",
     "jupyter.sendSelectionToInteractiveWindow": true,
     "jupyter.askForKernelRestart": false,
     "files.insertFinalNewline": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true,
+    "editor.formatOnSave": true,
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
+    },
+    "terraform.codelens.referenceCount": true,
+    "terraform-ls.terraformExecPath": "/opt/homebrew/bin/terraform",
+    "redhat.telemetry.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "cSpell.userWords": [
+        "ADYEN",
+        "backoff",
+        "configmap",
+        "covariate",
+        "covariates",
+        "derp",
+        "Discretize",
+        "Discretized",
+        "discretizer",
+        "envvar",
+        "epidemicsound",
+        "gcloud",
+        "Goyal",
+        "gserviceaccount",
+        "gunicorn",
+        "hparams",
+        "ISRC",
+        "kubectl",
+        "lightfm",
+        "linucb",
+        "logfile",
+        "MULTIPROC",
+        "Navin",
+        "Oompah",
+        "pydantic",
+        "pyplot",
+        "RECURLY",
+        "redoc",
+        "shipit",
+        "Shipra",
+        "sklearn",
+        "starlette",
+        "tolist",
+        "tqdm",
+        "tstamp",
+        "UNNEST",
+        "unstruct",
+        "uvicorn",
+        "vals",
+        "wandb"
+    ],
+    "yaml.format.enable": false,
+    "window.zoomLevel": 2
 }
