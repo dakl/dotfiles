@@ -1,7 +1,5 @@
 export PATH=$HOME/.pyenv/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
-export CLOUDSDK_PYTHON=/usr/bin/python3
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -59,3 +57,5 @@ if [ -f $HOME/.extra.sh ]; then
 fi
 
 export PATH=$(pyenv root)/shims:$PATH
+export PATH=/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
+export CLOUDSDK_PYTHON=/usr/bin/python3
