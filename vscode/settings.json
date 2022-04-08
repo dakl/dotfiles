@@ -92,6 +92,7 @@
         "gserviceaccount",
         "gunicorn",
         "healthz",
+        "highmem",
         "hparams",
         "isin",
         "ISRC",
@@ -105,9 +106,12 @@
         "ngrams",
         "Oompah",
         "Ooyy",
+        "pipenv",
         "pushgateway",
         "pydantic",
         "pyplot",
+        "pythonjsonlogger",
+        "pytz",
         "RECURLY",
         "redoc",
         "reindex",
@@ -117,7 +121,9 @@
         "Shipra",
         "sklearn",
         "starlette",
+        "subgenres",
         "tocsc",
+        "tolerations",
         "tolist",
         "tqdm",
         "tstamp",
@@ -126,8 +132,12 @@
         "uvicorn",
         "vals",
         "wandb",
-        "youtubetagsrecommender"
+        "wsgi",
+        "youtubetagsrecommender",
+        "YTDS"
     ],
     "yaml.format.enable": false,
-    "window.zoomLevel": 3
+    "workbench.colorTheme": "Default Light+",
+    "window.zoomLevel": 3,
+    "gitlens.plusFeatures.enabled": false
 }
