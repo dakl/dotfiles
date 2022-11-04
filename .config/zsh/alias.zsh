@@ -1,4 +1,4 @@
-alias dc="docker-compose"
+alias dc="docker compose"
 alias fgr="find .|grep"
 alias ga="git add"
 alias gc="git commit -m "
