@@ -18,6 +18,7 @@ function doIt() {
 		--exclude "Brewfile" \
 		--exclude "iterm2" \
 		--exclude "vscode" \
+		--exclude "vm" \
 		-av --no-perms . ~
 
 	VSCODE_BASE="$HOME/Library/Application Support/Code/User"
