@@ -124,13 +124,13 @@
         "command": "editor.action.transformToUppercase"
     },
     {
-        "key": "cmd+k cmd+g",
+        "key": "cmd+g cmd+e",
         "command": "extension.showGitmoji"
     },
     {
         // thanks @ https://stackoverflow.com/users/11107541/starball
         // for this https://stackoverflow.com/a/76886742/179444
-        "key": "cmd+k cmd+c",
+        "key": "cmd+g cmd+c",
         "command": "runCommands",
         "args": {
             "commands": [
@@ -142,7 +142,7 @@
         "when": "gitOpenRepositoryCount == 1"
     },
     {
-        "key": "cmd+k cmd+o",
+        "key": "cmd+g cmd+o",
         "command": "git.commit"
     }
 ]
