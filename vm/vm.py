@@ -98,6 +98,17 @@ class Commands:
                     accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-a100",
                 )
             ]
+
+        elif gpu_type == "t4":
+            instance.machine_type = 'https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-32'
+            accelerator_config = [
+                compute_v1.AcceleratorConfig(
+                    accelerator_count=1,
+                    accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-t4",
+                )
+            ]
+
+
         instance.guest_accelerators = accelerator_config
 
         instance_client.update(
