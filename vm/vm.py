@@ -70,7 +70,7 @@ class Commands:
 
     def set_gpu(
         self,
-        gpu_type: Literal["none", "v100", "a100"] = "none",
+        gpu_type: Literal["none", "v100", "a100", "t4"] = "none",
         name: str = "danielk",
         zone: str = "europe-west4-a",
         project_id: str = "es-playground-dev-c9e7",
@@ -107,7 +107,6 @@ class Commands:
                     accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-t4",
                 )
             ]
-
 
         instance.guest_accelerators = accelerator_config
 

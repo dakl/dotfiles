@@ -122,5 +122,27 @@
     {
         "key": "ctrl+[IntlBackslash]",
         "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "cmd+k cmd+g",
+        "command": "extension.showGitmoji"
+    },
+    {
+        // thanks @ https://stackoverflow.com/users/11107541/starball
+        // for this https://stackoverflow.com/a/76886742/179444
+        "key": "cmd+k cmd+c",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.scm.focus",
+                "list.focusFirst",
+                "list.select"
+            ]
+        },
+        "when": "gitOpenRepositoryCount == 1"
+    },
+    {
+        "key": "cmd+k cmd+o",
+        "command": "git.commit"
     }
 ]
