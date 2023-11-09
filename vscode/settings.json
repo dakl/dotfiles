@@ -1,53 +1,29 @@
 {
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [
-        100,
-    ],
-    "editor.minimap.showSlider": "always",
-    "editor.fontSize": 16,
-    "files.exclude": {
-        "**/*.pyc": true
-    },
-    "python.testing.pytestArgs": [
-        "-vv"
-    ],
-    "python.venvPath": "~/.local/share/virtualenvs/",
-    "python.formatting.provider": "black",
-    "workbench.editor.showIcons": true,
-    "eslint.lintTask.enable": true,
-    "editor.minimap.maxColumn": 80,
-    "editor.minimap.enabled": false,
-    "git.confirmSync": false,
-    "liveshare.featureSet": "stable",
-    "[yaml]": {
-        "editor.defaultFormatter": "ms-python.vscode-pylance"
-    },
-    "editor.codeActionsOnSave": {},
-    "diffEditor.ignoreTrimWhitespace": false,
-    "jupyter.runStartupCommands": [
-        "'%load_ext autoreload\\n%autoreload 2'"
-    ],
-    "jupyter.notebookFileRoot": "",
-    "jupyter.askForKernelRestart": false,
-    "files.insertFinalNewline": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.autofetch": true,
-    "[terraform]": {
-        "editor.defaultFormatter": "hashicorp.terraform",
+    "Prettier-SQL.SQLFlavourOverride": "bigquery",
+    "Prettier-SQL.expressionWidth": 80,
+    "Prettier-SQL.keywordCase": "upper",
+    "Prettier-SQL.linesBetweenQueries": 0,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "file"
+        "editor.formatOnType": true
     },
     "[terraform-vars]": {
         "editor.defaultFormatter": "hashicorp.terraform",
         "editor.formatOnSave": true,
         "editor.formatOnSaveMode": "file"
     },
-    "terraform.codelens.referenceCount": true,
-    "redhat.telemetry.enabled": false,
-    "editor.inlineSuggest.enabled": true,
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "ms-python.vscode-pylance"
+    },
+    "cSpell.ignoreWords": [
+        "Tdim"
+    ],
     "cSpell.userWords": [
         "actreco",
         "actrecoseq",
@@ -258,55 +234,71 @@
         "youtubetagsrecommender",
         "YTDS"
     ],
-    "yaml.format.enable": false,
-    "sql-formatter.uppercase": true,
-    "cSpell.ignoreWords": [
-        "Tdim"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {},
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.minimap.showSlider": "always",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "none",
+    "editor.rulers": [
+        100
     ],
+    "editor.stickyScroll.enabled": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "files.exclude": {
+        "**/*.pyc": true
+    },
+    "files.insertFinalNewline": true,
     "files.watcherExclude": {
         "**.mypy_cache": true,
         "**/.pytest_cache": true,
         "**/wandb": true
     },
-    "terraform.languageServer.terraform.path": "/opt/homebrew/bin/terraform",
-    "python.linting.flake8Args": [
-        "--max-line-length=100"
-    ],
-    "window.commandCenter": true,
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.stickyScroll.enabled": true,
-    "python.languageServer": "Pylance",
-    "python.autoComplete.extraPaths": [
-
-    ],
-    "python.diagnostics.sourceMapsEnabled": true,
-    "python.analysis.extraPaths": [],
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "workbench.colorTheme": "Visual Studio Dark",
+    "git.autofetch": true,
+    "git.confirmSync": false,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": true,
         "markdown": true,
+        "plaintext": true,
         "scminput": false
     },
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "remote.SSH.remoteServerListenOnSocket": true,
+    "isort.check": true,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.notebookFileRoot": "",
+    "jupyter.runStartupCommands": [
+        "'%load_ext autoreload\\n%autoreload 2'"
+    ],
+    "liveshare.featureSet": "stable",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.extraPaths": [],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.autoComplete.extraPaths": [],
+    "python.diagnostics.sourceMapsEnabled": true,
+    "python.languageServer": "Pylance",
+    "python.testing.pytestArgs": [
+        "-vv"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.venvPath": "~/.local/share/virtualenvs/",
+    "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
         "danielk": "linux"
     },
-    "python.analysis.autoFormatStrings": true,
-    "python.testing.pytestEnabled": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "Prettier-SQL.SQLFlavourOverride": "bigquery",
-    "Prettier-SQL.linesBetweenQueries": 0,
-    "Prettier-SQL.expressionWidth": 80,
-    "Prettier-SQL.keywordCase": "upper",
-    "editor.formatOnSave": true,
-    "isort.check": true,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "sql-formatter.uppercase": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terraform.languageServer.terraform.path": "/opt/homebrew/bin/terraform",
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.editor.showIcons": true,
+    "yaml.format.enable": false
 }
