@@ -1,133 +1,126 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "cmd+t cmd+right",
-        "command": "workbench.action.terminal.focusNext"
+        "command": "workbench.action.terminal.focusNext",
+        "key": "cmd+t cmd+right"
     },
     {
-        "key": "cmd+t cmd+left",
-        "command": "workbench.action.terminal.focusPrevious"
+        "command": "workbench.action.terminal.focusPrevious",
+        "key": "cmd+t cmd+left"
     },
     {
-        "key": "cmd+t cmd+a",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "cmd+t cmd+a"
     },
     {
-        "key": "ctrl+shift+[Equal]",
-        "command": "-workbench.action.terminal.toggleTerminal"
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+shift+[Equal]"
     },
     {
-        "key": "cmd+t cmd+n",
-        "command": "workbench.action.terminal.new"
+        "command": "workbench.action.terminal.new",
+        "key": "cmd+t cmd+n"
     },
     {
-        "key": "cmd+t cmd+t",
-        "command": "workbench.action.terminal.focus"
+        "command": "workbench.action.terminal.focus",
+        "key": "cmd+t cmd+t"
     },
     {
-        "key": "cmd+t cmd+1",
-        "command": "workbench.action.terminal.focusAtIndex1"
+        "command": "workbench.action.terminal.focusAtIndex1",
+        "key": "cmd+t cmd+1"
     },
     {
-        "key": "cmd+t cmd+2",
-        "command": "workbench.action.terminal.focusAtIndex2"
+        "command": "workbench.action.terminal.focusAtIndex2",
+        "key": "cmd+t cmd+2"
     },
     {
-        "key": "cmd+t cmd+3",
-        "command": "workbench.action.terminal.focusAtIndex3"
+        "command": "workbench.action.terminal.focusAtIndex3",
+        "key": "cmd+t cmd+3"
     },
     {
-        "key": "cmd+t cmd+4",
-        "command": "workbench.action.terminal.focusAtIndex4"
+        "command": "workbench.action.terminal.focusAtIndex4",
+        "key": "cmd+t cmd+4"
     },
     {
-        "key": "cmd+t cmd+v",
-        "command": "workbench.action.terminal.paste"
+        "command": "workbench.action.terminal.paste",
+        "key": "cmd+t cmd+v"
     },
     {
-        "key": "cmd+e",
-        "command": "workbench.action.focusActiveEditorGroup"
+        "command": "workbench.action.focusActiveEditorGroup",
+        "key": "cmd+e"
     },
     {
-        "key": "cmd+t cmd+w",
         "command": "workbench.action.terminal.kill",
+        "key": "cmd+t cmd+w",
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+k cmd+s",
         "command": "python.sortImports",
+        "key": "cmd+k cmd+s",
         "when": "editorTextFocus && editorLangId == 'python'"
     },
     {
-        "key": "cmd+k cmd+c",
         "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "cmd+k cmd+c",
-        "command": "-editor.action.addCommentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+alt+7",
+        "command": "-editor.action.addCommentLine",
+        "key": "cmd+k cmd+c",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
         "command": "-gitlens.showCommitSearch",
+        "key": "shift+alt+7",
         "when": "gitlens:enabled"
     },
     {
-        "key": "cmd+k cmd+f",
         "command": "-editor.action.formatSelection",
+        "key": "cmd+k cmd+f",
         "when": "editorHasSelection && editorTextFocus && !editorReadonly"
     },
     {
-        "key": "cmd+k cmd+f",
         "command": "editor.action.formatDocument",
+        "key": "cmd+k cmd+f",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+alt+f",
         "command": "-editor.action.formatDocument",
+        "key": "shift+alt+f",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "cmd+k cmd+s",
-        "command": "-workbench.action.openGlobalKeybindings"
+        "command": "-workbench.action.openGlobalKeybindings",
+        "key": "cmd+k cmd+s"
     },
     {
-        "key": "shift+alt+7",
         "command": "-gitlens.showCommitSearch",
+        "key": "shift+alt+7",
         "when": "gitlens:enabled && gitlens:keymap == 'standard'"
     },
     {
-        "key": "cmd+t cmd+r",
-        "command": "python.runtests"
+        "command": "python.runtests",
+        "key": "cmd+t cmd+r"
     },
     {
-        "key": "cmd+t cmd+o",
-        "command": "python.selectAndRunTestFile"
+        "command": "python.selectAndRunTestFile",
+        "key": "cmd+t cmd+o"
     },
     {
-        "key": "cmd+t cmd+f",
-        "command": "python.runCurrentTestFile"
+        "command": "python.runCurrentTestFile",
+        "key": "cmd+t cmd+f"
     },
     {
-        "key": "cmd+k cmd+s",
-        "command": "sort-imports.sort",
-        "when": "editorTextFocus && editorLangId == 'javascript'"
-    },
-    {
-        "key": "cmd+l cmd+s",
         "command": "editor.action.sortLinesAscending",
+        "key": "cmd+l cmd+s",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+[IntlBackslash]",
-        "command": "editor.action.transformToUppercase"
+        "command": "editor.action.transformToUppercase",
+        "key": "ctrl+[IntlBackslash]"
     },
     {
         // thanks @ https://stackoverflow.com/users/11107541/starball
         // for this https://stackoverflow.com/a/76886742/179444
-        "key": "cmd+g cmd+c",
-        "command": "runCommands",
         "args": {
             "commands": [
                 "workbench.scm.focus",
@@ -135,10 +128,22 @@
                 "list.select"
             ]
         },
+        "command": "runCommands",
+        "key": "cmd+g cmd+c",
         "when": "gitOpenRepositoryCount == 1"
     },
     {
-        "key": "cmd+g cmd+o",
-        "command": "git.commit"
+        "command": "git.commit",
+        "key": "cmd+g cmd+o"
+    },
+    {
+        "command": "editor.action.organizeImports",
+        "key": "cmd+k cmd+s",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+    },
+    {
+        "command": "-editor.action.organizeImports",
+        "key": "shift+alt+o",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
     }
 ]
