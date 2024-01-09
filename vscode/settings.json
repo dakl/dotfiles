@@ -101,6 +101,7 @@
         "hparams",
         "httpx",
         "huggingface",
+        "humiditysensor",
         "hypertune",
         "idxs",
         "iglu",
@@ -118,6 +119,7 @@
         "keras",
         "keymap",
         "kidz",
+        "Klev",
         "klevan",
         "Klevebring",
         "kosmos",
@@ -136,6 +138,7 @@
         "lookback",
         "maxval",
         "metarank",
+        "metatag",
         "metatags",
         "minval",
         "mlops",
@@ -168,9 +171,11 @@
         "peft",
         "pgzero",
         "pgzrun",
+        "pincode",
         "pipenv",
         "popscores",
         "postprocess",
+        "precommit",
         "preds",
         "PREPROMPT",
         "pretrained",
@@ -178,6 +183,7 @@
         "pushgateway",
         "pydantic",
         "pygame",
+        "pyhap",
         "pylance",
         "pyplot",
         "pytest",
@@ -198,6 +204,7 @@
         "savedmodel",
         "scipy",
         "searchreranker",
+        "secretmanager",
         "semanticsearch",
         "serviceaccount",
         "setdiff",
@@ -296,7 +303,8 @@
     "python.venvPath": "~/.local/share/virtualenvs/",
     "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
-        "danielk": "linux"
+        "danielk": "linux",
+        "musicgen-80gb": "linux"
     },
     "remote.SSH.remoteServerListenOnSocket": true,
     "security.workspace.trust.untrustedFiles": "open",
@@ -306,5 +314,12 @@
     "window.commandCenter": true,
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.editor.showIcons": true,
-    "yaml.format.enable": false
+    "yaml.format.enable": false,
+    "liveshare.accessibility.voiceEnabled": false,
+    "terminal.integrated.fontSize": 14,
+    "git.openRepositoryInParentFolders": "always",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.zoomLevel": 2
 }
