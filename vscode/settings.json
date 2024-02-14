@@ -40,6 +40,7 @@
         "Autocast",
         "autofetch",
         "autoreload",
+        "autospotsfx",
         "AUTOTUNE",
         "autouse",
         "backoff",
@@ -68,6 +69,8 @@
         "discretizer",
         "Distil",
         "distilbert",
+        "docformatter",
+        "downsample",
         "dropna",
         "dtype",
         "Earstronaut",
@@ -83,13 +86,16 @@
         "freetext",
         "fromarray",
         "fuga",
+        "fullmix",
         "fuser",
         "gapic",
         "gcloud",
         "gcsfuse",
+        "gguf",
         "gitops",
         "gops",
         "Goyal",
+        "gradio",
         "gserviceaccount",
         "gsutil",
         "gunicorn",
@@ -110,6 +116,7 @@
         "isort",
         "ISRC",
         "iterrows",
+        "itertuples",
         "itso",
         "jamendo",
         "joblib",
@@ -321,5 +328,13 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": 2
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    }
 }
