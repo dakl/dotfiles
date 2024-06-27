@@ -28,6 +28,14 @@ class Commands:
         for instance in instance_list:
             self._print_instance(instance)
 
+    def ps(
+        self,
+        project_id: str = "es-playground-dev-c9e7",
+        zone: str = "europe-west4-a",
+    ) -> Iterable[compute_v1.Instance]:
+        # alias for ls, because I'm used to docker
+        self.ls(project_id, zone)
+
     def up(
         self,
         project_id: str = "es-playground-dev-c9e7",
@@ -78,11 +86,11 @@ class Commands:
         instance_client = compute_v1.InstancesClient()
         instance = instance_client.get(project=project_id, zone=zone, instance=name)
         if gpu_type == "none":
-            instance.machine_type = 'https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-8'
+            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-8"
             accelerator_config = None
 
         elif gpu_type == "v100":
-            instance.machine_type = 'https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-8'
+            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-8"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
                     accelerator_count=1,
@@ -91,7 +99,7 @@ class Commands:
             ]
 
         elif gpu_type == "a100":
-            instance.machine_type = 'https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/a2-highgpu-1g'
+            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/a2-highgpu-1g"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
                     accelerator_count=1,
@@ -100,7 +108,7 @@ class Commands:
             ]
 
         elif gpu_type == "t4":
-            instance.machine_type = 'https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-32'
+            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-32"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
                     accelerator_count=1,
