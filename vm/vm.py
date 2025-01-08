@@ -78,7 +78,8 @@ class Commands:
 
     def set_gpu(
         self,
-        gpu_type: Literal["none", "v100", "a100", "t4"] = "none",
+        gpu_type: Literal["none", "v100", "a100", "t4", "l4"] = "none",
+        count: int = 1,
         name: str = "danielk",
         zone: str = "europe-west4-a",
         project_id: str = "es-playground-dev-c9e7",
@@ -93,7 +94,7 @@ class Commands:
             instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-8"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
-                    accelerator_count=1,
+                    accelerator_count=count,
                     accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-v100",
                 )
             ]
@@ -102,7 +103,7 @@ class Commands:
             instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/a2-highgpu-1g"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
-                    accelerator_count=1,
+                    accelerator_count=count,
                     accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-a100",
                 )
             ]
@@ -111,8 +112,17 @@ class Commands:
             instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/n1-standard-32"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
-                    accelerator_count=1,
+                    accelerator_count=count,
                     accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-tesla-t4",
+                )
+            ]
+
+        elif gpu_type == "l4":
+            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/g2-standard-24"
+            accelerator_config = [
+                compute_v1.AcceleratorConfig(
+                    accelerator_count=count,
+                    accelerator_type="projects/es-playground-dev-c9e7/zones/europe-west4-a/acceleratorTypes/nvidia-l4",
                 )
             ]
 
