@@ -47,6 +47,7 @@
         "AUTOTUNE",
         "autouse",
         "backoff",
+        "Behaviour",
         "blit",
         "buildx",
         "bytestream",
@@ -68,6 +69,7 @@
         "datawarehouse",
         "derp",
         "derped",
+        "despawn",
         "Detr",
         "Discretize",
         "Discretized",
@@ -155,6 +157,7 @@
         "logfile",
         "logprobs",
         "lookback",
+        "Mathf",
         "maxval",
         "metarank",
         "metatag",
@@ -207,6 +210,7 @@
         "pyhap",
         "pylance",
         "pyplot",
+        "pyscene",
         "pytest",
         "pythonjsonlogger",
         "pytz",
@@ -219,6 +223,7 @@
         "Reindexing",
         "relu",
         "reranker",
+        "Rigidbody",
         "rubberllama",
         "runtests",
         "samplerate",
@@ -260,6 +265,7 @@
         "tqdm",
         "trange",
         "Transformerish",
+        "TRANTOR",
         "tstamp",
         "UNNEST",
         "unstruct",
@@ -352,7 +358,8 @@
         "*": true,
         "plaintext": false,
         "markdown": true,
-        "scminput": false
+        "scminput": false,
+        "csharp": false
     },
     "[svelte]": {
         "editor.defaultFormatter": "svelte.svelte-vscode"
@@ -363,5 +370,11 @@
     "gitlens.advanced.messages": {
         "suppressIntegrationRequestTimedOutWarning": true
     },
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "editor.codeLens": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cody.autocomplete.advanced.provider": "unstable-openai"
 }

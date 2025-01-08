@@ -80,7 +80,7 @@
     },
     {
         "command": "editor.action.formatDocument",
-        "key": "cmd+k cmd+f",
+        "key": "cmd+j cmd+f",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "command": "editor.action.sortLinesAscending",
-        "key": "cmd+l cmd+s",
+        "key": "cmd+j cmd+s",
         "when": "editorTextFocus"
     },
     {
@@ -145,5 +145,30 @@
         "command": "-editor.action.organizeImports",
         "key": "shift+alt+o",
         "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+    },
+    {
+        "key": "alt+k",
+        "command": "aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible && !composerControlPanelIsVisible"
+    },
+    {
+        "key": "cmd+k",
+        "command": "-aipopup.action.modal.generate",
+        "when": "editorFocus && !composerBarIsVisible && !composerControlPanelIsVisible"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorai.action.generateInTerminal",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+k",
+        "command": "-cursorai.action.generateInTerminal",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
     }
 ]
