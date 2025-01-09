@@ -6,8 +6,30 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # start ssh-agent if it's not already running
 if ! pgrep -u $USER -x ssh-agent > /dev/null; then
+	# agent is not running, start it
     ssh-agent -s > ~/.ssh-agent
 	source ~/.ssh-agent
+else
+	# agent is running, check if SSH_AUTH_SOCK is set
+	if [ -z "$SSH_AUTH_SOCK" ]; then
+		# if .ssh-agent is availble source it
+		if [ -f ~/.ssh-agent ]; then
+			echo "Sourcing .ssh-agent"
+			source ~/.ssh-agent
+		else
+			echo "SSH_AUTH_SOCK is not set, looking for agent socket files"
+			# .ssh-agent is not available on macos, so instead we look at the agent socket files
+			for sock in `ls /tmp/ssh-*/agent.*`; do
+				export SSH_AUTH_SOCK=$sock
+				if ssh-add -l; then
+					echo "Your SSH Agent is fixed. New socket=$sock."
+					break
+				fi
+			done
+		fi
+	else
+		echo "SSH_AUTH_SOCK is set to $SSH_AUTH_SOCK"
+	fi
 fi
 
 # add ssh key to ssh-agent
