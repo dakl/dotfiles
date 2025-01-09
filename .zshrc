@@ -1,9 +1,19 @@
 export PATH=$HOME/.pyenv/bin:$PATH
 export PATH=/usr/local/bin:$PATH:~/go/bin
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+
+# start ssh-agent if it's not already running
+if ! pgrep -u $USER -x ssh-agent > /dev/null; then
+    ssh-agent -s > ~/.ssh-agent
+	source ~/.ssh-agent
+fi
+
+# add ssh key to ssh-agent
+ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
+
+# init pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
