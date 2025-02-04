@@ -100,7 +100,7 @@ class Commands:
             ]
 
         elif gpu_type == "a100":
-            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/a2-highgpu-1g"
+            instance.machine_type = f"https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/a2-highgpu-{count}g"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
                     accelerator_count=count,
