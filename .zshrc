@@ -84,10 +84,10 @@ HIST_STAMPS="yyyy-mm-dd"
 # run homebrew load script
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+
+export PATH=$(pyenv root)/shims:$PATH
+export CLOUDSDK_PYTHON=/usr/bin/python3
+
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
-
-export PATH=$(pyenv root)/shims:$PATH
-export PATH=/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
-export CLOUDSDK_PYTHON=/usr/bin/python3
