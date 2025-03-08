@@ -6,6 +6,5 @@ spaceship_statusemoji() {
 	fi
 	RND=$(python -c "import random, sys; print(random.randint(1, int(sys.argv[1])))" $(echo $#ITEMS))
   spaceship::section \
-    "cyan" \
     "$ITEMS[$RND]"
 }
