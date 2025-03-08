@@ -1,4 +1,5 @@
 spaceship_statusemoji() {
+	# get an emoji representing the current status
 	if [ $RETVAL -eq 0 ]; then
 		ITEMS=("😄 " "👍 " "😍 " "🖖 " "👊 " "👌 " "🙌 " "😎 ")
 	else
