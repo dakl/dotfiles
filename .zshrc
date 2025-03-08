@@ -88,6 +88,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$(pyenv root)/shims:$PATH
 export CLOUDSDK_PYTHON=/usr/bin/python3
 
+#set python breakpoint to be ipdb.set_trace instead of the default pdb.set_trace
+export PYTHONBREAKPOINT=ipdb.set_trace
+
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
