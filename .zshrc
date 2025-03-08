@@ -38,6 +38,7 @@ ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
 # init pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  export PATH=$(pyenv root)/shims:$PATH
 fi
 
 # Add wisely, as too many plugins slow down shell startup.
@@ -81,11 +82,13 @@ COMPLETION_WAITING_DOTS="true"
 # date format, see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
-# run homebrew load script
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# run homebrew load script, if exists
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 
-export PATH=$(pyenv root)/shims:$PATH
+
 export CLOUDSDK_PYTHON=/usr/bin/python3
 
 #set python breakpoint to be ipdb.set_trace instead of the default pdb.set_trace
