@@ -1,5 +1,20 @@
+[project]
+name = "gce-vm-helper"
+version = "1.0.0"
+description = "GCE vm helper"
+authors = [
+    {name = "Daniel K", email = "firstname.lastname@gmail.com"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fire",
+    "google-cloud-compute",
+
+]
+
 [tool.black]
 line-length = 100
 
 [tool.isort]
 profile="black"
+

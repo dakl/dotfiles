@@ -376,5 +376,13 @@
     },
     "editor.codeLens": false,
     "editor.inlineSuggest.suppressSuggestions": true,
-    "cody.autocomplete.advanced.provider": "unstable-openai"
+    "cody.autocomplete.advanced.provider": "unstable-openai",
+    "remote.SSH.defaultExtensions": [
+        "anyscalecompute.anyscale-workspaces",
+        "ms-python.python",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter"
+    ],
+    "remote.SSH.configFile": "/Users/daniel.klevebring/.ssh/config"
 }

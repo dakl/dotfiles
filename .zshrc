@@ -3,6 +3,10 @@ export PATH=/usr/local/bin:$PATH:~/go/bin
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+# run homebrew load script, if exists
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # start ssh-agent if it's not already running
 if ! pgrep -u $USER -x ssh-agent > /dev/null; then
@@ -35,10 +39,14 @@ fi
 # add ssh key to ssh-agent
 ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
 
-# init pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
+# if uv is installed, use it
+if type uv 1>/dev/null 2>&1; then
+	alias python="uv run python"
+else if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   export PATH=$(pyenv root)/shims:$PATH
+else
+  echo "Neither uv nor pyenv found"
 fi
 
 # Add wisely, as too many plugins slow down shell startup.
@@ -47,6 +55,11 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+)
+
+# Add commands you don't want to expand
+GLOBALIAS_FILTER_VALUES=(
+    grep
 )
 
 # Path to your oh-my-zsh installation.
@@ -81,12 +94,6 @@ COMPLETION_WAITING_DOTS="true"
 
 # date format, see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
-
-# run homebrew load script, if exists
-if [ -f /opt/homebrew/bin/brew ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 
 
 export CLOUDSDK_PYTHON=/usr/bin/python3
