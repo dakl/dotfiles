@@ -42,11 +42,11 @@ ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
 # if uv is installed, use it
 if type uv 1>/dev/null 2>&1; then
 	alias python="uv run python"
-else if command -v pyenv 1>/dev/null 2>&1; then
+elif command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   export PATH=$(pyenv root)/shims:$PATH
 else
-  echo "Neither uv nor pyenv found"
+  echo "Neither uv or pyenv found"
 fi
 
 # Add wisely, as too many plugins slow down shell startup.
