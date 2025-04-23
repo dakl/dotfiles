@@ -118,7 +118,7 @@ class Commands:
             ]
 
         elif gpu_type == "l4":
-            instance.machine_type = "https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/g2-standard-24"
+            instance.machine_type = f"https://www.googleapis.com/compute/v1/projects/es-playground-dev-c9e7/zones/europe-west4-a/machineTypes/g2-standard-{12*count}"
             accelerator_config = [
                 compute_v1.AcceleratorConfig(
                     accelerator_count=count,
