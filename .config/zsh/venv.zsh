@@ -7,7 +7,7 @@ function create_virtualenv () {
     else
         # ask for the name of the new virtualenv
         vared -p 'Create new virtualenv with name: ' -c VENV_NAME
-        virtualenv --prompt "($VENV_NAME) " $VENV_BASE
+        python -m venv --prompt "($VENV_NAME) " $VENV_BASE
         source $VENV_BASE/bin/activate
     fi
 }

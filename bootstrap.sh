@@ -41,6 +41,8 @@ function doIt() {
 		fi
 	done
 
+	./uv-python-symlink.sh
+
 	echo "Done"
 }
 

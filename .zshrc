@@ -1,12 +1,7 @@
-export PATH=$HOME/.pyenv/bin:$PATH
-export PATH=/usr/local/bin:$PATH:~/go/bin
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+fpath=(/Users/daniel.klevebring/.local/share/zsh/site-functions $fpath)
+export PATH="/Users/daniel.klevebring/.local/bin:$PATH"
 
-# run homebrew load script, if exists
-if [ -f /opt/homebrew/bin/brew ]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+export PATH=/usr/local/bin:$PATH:~/go/bin
 
 # start ssh-agent if it's not already running
 if ! pgrep -u $USER -x ssh-agent > /dev/null; then
@@ -38,16 +33,6 @@ fi
 
 # add ssh key to ssh-agent
 ssh-add -l |grep -q daniel.klevebring@gmail.com || ssh-add
-
-# if uv is installed, use it
-if type uv 1>/dev/null 2>&1; then
-	alias python="uv run python"
-elif command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  export PATH=$(pyenv root)/shims:$PATH
-else
-  echo "Neither uv or pyenv found"
-fi
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
@@ -100,6 +85,12 @@ export CLOUDSDK_PYTHON=/usr/bin/python3
 
 #set python breakpoint to be ipdb.set_trace instead of the default pdb.set_trace
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# run homebrew load script, if exists
+if [ -z "$HOMEBREW_PREFIX" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv | egrep -v '\bPATH=')"
+  export PATH="$PATH:${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin"
+fi
 
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh

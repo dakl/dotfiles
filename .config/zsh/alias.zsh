@@ -8,5 +8,5 @@ alias hgr="history|grep"
 alias kc="kubectl"
 alias kx="kubectx"
 alias l="ls -laoh"
-alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
+alias pip="uv pip"
 function vm () python ${HOME}/dotfiles/vm/vm.py "$@"

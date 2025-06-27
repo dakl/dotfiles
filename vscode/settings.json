@@ -384,5 +384,10 @@
         "ms-toolsai.jupyter-keymap",
         "ms-toolsai.jupyter"
     ],
-    "remote.SSH.configFile": "/Users/daniel.klevebring/.ssh/config"
+    "remote.SSH.configFile": "/Users/daniel.klevebring/.ssh/config",
+    "yaml.schemas": {
+        "/Users/daniel.klevebring/.vscode/extensions/continue.continue-1.0.7-darwin-arm64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    }
 }
