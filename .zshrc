@@ -92,6 +92,12 @@ if [ -z "$HOMEBREW_PREFIX" ]; then
   export PATH="$PATH:${HOMEBREW_PREFIX}/bin:${HOMEBREW_PREFIX}/sbin"
 fi
 
+# load gcloud completion, if brew is installed
+if [ -x "$(command -v brew)" ]; then
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+fi
+
 if [ -f $HOME/.extra.sh ]; then
   source $HOME/.extra.sh
 fi
