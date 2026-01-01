@@ -26,6 +26,7 @@ function doIt() {
 	rsync --quiet \
 		--exclude ".git/" \
 		--exclude ".vscode/" \
+		--exclude ".cspell/" \
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "init.sh" \
@@ -60,6 +61,10 @@ function doIt() {
 	# ensure that `python` is a symlink to the latest uv-managed Python
 	# to let various tools find a functional Python
 	./uv-python-symlink.sh
+
+	# create cspell dictionary and symlink the dictionary file to the file in dotfiles
+	mkdir -p ~/.cspell
+	symlink ".cspell/dictionary.txt" "${HOME}/.cspell/dictionary.txt"
 
 	echo "Done"
 }
