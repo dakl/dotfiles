@@ -207,5 +207,17 @@
         "key": "ctrl+shift+q",
         "command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
         "when": "inQuickOpen && inViewsPicker"
-    }
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u001bb" },
+        "when": "terminalFocus"
+      },
+      {
+        "key": "alt+right",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u001bf" },
+        "when": "terminalFocus"
+      }
 ]
