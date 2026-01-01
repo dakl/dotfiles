@@ -31,6 +31,7 @@ bytestream
 caml
 cleffy
 clipclap
+codespell
 colliderect
 compositionmob
 compositionmobs
@@ -114,6 +115,7 @@ iglu
 iloc
 instrumentator
 ipdb
+ipynb
 ipython
 isin
 isort

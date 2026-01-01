@@ -55,5 +55,11 @@
             "path": "~/.cspell/dictionary.txt",
             "addWords": true
         }
-    }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "python.testing.pytestEnabled": true,
+    "ruff.configuration": "",
+    "notebook.defaultFormatter": "charliermarsh.ruff"
 }

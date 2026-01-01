@@ -79,11 +79,6 @@
         "when": "editorHasSelection && editorTextFocus && !editorReadonly"
     },
     {
-        "command": "editor.action.formatDocument",
-        "key": "cmd+j cmd+f",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "command": "-editor.action.formatDocument",
         "key": "shift+alt+f",
         "when": "editorTextFocus && !editorReadonly"
@@ -219,5 +214,9 @@
         "command": "workbench.action.terminal.sendSequence",
         "args": { "text": "\u001bf" },
         "when": "terminalFocus"
-      }
+    },
+    {
+        "key": "cmd+j cmd+f",
+        "command": "ruff.executeAutofix"
+    }
 ]
