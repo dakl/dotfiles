@@ -36,6 +36,7 @@ colliderect
 compositionmob
 compositionmobs
 configmap
+conv
 copilotkit
 coreml
 COUNTIF
@@ -104,6 +105,7 @@ hashtable
 healthz
 hfcache
 highmem
+hnsw
 hparam
 hparams
 httpx
@@ -193,10 +195,12 @@ pacman
 partitiontime
 pedalboard
 peft
+pgvector
 pgzero
 pgzrun
 pincode
 pipenv
+poolclass
 popscores
 postprocess
 precommit
@@ -204,7 +208,9 @@ preds
 PREPROMPT
 pretrained
 probs
+psycopg
 pushgateway
+pycache
 pycodestyle
 pydantic
 Pydantic
@@ -214,6 +220,7 @@ pyhap
 pylance
 pyplot
 pyscene
+pysqlite
 pytest
 pythonjsonlogger
 pythonpath
@@ -240,6 +247,7 @@ searchreranker
 secretmanager
 semanticsearch
 serviceaccount
+sessionmaker
 setdiff
 setuptools
 sfxgroups
@@ -256,7 +264,9 @@ soundfile
 soundmatch
 spotifytoepidemic
 spotipy
+sqlalchemy
 starlette
+Streamable
 streamlit
 structlog
 subgenres
@@ -270,6 +280,7 @@ tfdsdatasets
 thriftpy
 tiiuae
 Timecode
+TIMESTAMPTZ
 tobytes
 tocsc
 tocsr
@@ -291,6 +302,7 @@ UNNEST
 unstruct
 uvicorn
 vals
+VARCHAR
 venv
 vertexai
 vfeat

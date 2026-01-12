@@ -61,5 +61,7 @@
     },
     "python.testing.pytestEnabled": true,
     "ruff.configuration": "",
-    "notebook.defaultFormatter": "charliermarsh.ruff"
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "ruff.lineLength": 100,
+    "flake8.enabled": false
 }
